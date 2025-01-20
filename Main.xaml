@@ -1,0 +1,317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main2" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.DocuSign" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.DocuSign" xmlns:ud="clr-namespace:UiPath.DocuSign;assembly=UiPath.DocuSign" xmlns:uda="clr-namespace:UiPath.DocuSign.Activities;assembly=UiPath.DocuSign.Activities" xmlns:udae="clr-namespace:UiPath.DocuSign.Activities.Envelope;assembly=UiPath.DocuSign.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.DocuSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.BAF.Models.Entity</x:String>
+      <x:String>UiPath.BAF.Models.CrudOperation</x:String>
+      <x:String>UiPath.BAF.Telemetry</x:String>
+      <x:String>BAFLayer</x:String>
+      <x:String>UiPath.DocuSign.Activities.Envelope</x:String>
+      <x:String>UiPath.DocuSign.Activities</x:String>
+      <x:String>UiPath.Swagger.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.DocuSign</AssemblyReference>
+      <AssemblyReference>UiPath.BAFLayer.Activities.Packaging</AssemblyReference>
+      <AssemblyReference>UiPath.DocuSign.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Docusign.IntegrationService.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main2" sap:VirtualizedContainerService.HintSize="1747,2938" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="AB31 4SD" Name="userCity" />
+      <Variable x:TypeArguments="x:String" Default="Default Weather" Name="currentWeather" />
+      <Variable x:TypeArguments="x:String" Default="Default Buisness" Name="userBuisness" />
+      <Variable x:TypeArguments="x:String" Default="Default ST, Default City, AB11 1DD" Name="userAddress" />
+      <Variable x:TypeArguments="x:String" Default="Default Name" Name="userName" />
+      <Variable x:TypeArguments="x:String" Name="outputContent" />
+      <Variable x:TypeArguments="x:String" Name="templateContent" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Getting Weather Sequence" sap:VirtualizedContainerService.HintSize="536,3059" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="502,1757" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Weather and climate change - Met Office(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1304" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3c129d3b-e96d-45b8-a1b3-879a397b7024" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1087" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="currentTemp">
+                      <Variable.Default>
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </Variable.Default>
+                    </Variable>
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3c129d3b-e96d-45b8-a1b3-879a397b7024" Text="[userCity + &quot;[k(Enter)]&quot;]" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="metoffice.gov.uk" ContentHash="lJVFo3TRIkymQffZU9YpRw" DesignTimeRectangle="1547, 399, 53, 50" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='location-search-submit' tag='BUTTON' type='submit' class='col-xs-2 col-sm-1' aaname=' Search ' check:innerText='Search' /&gt;" Guid="9940e730-785d-4bc0-b7bf-74bf11081ef3" InformativeScreenshot="c3f811fb9fa98e2d076ad2d0b5998829.png" Reference="_QxAbkkw30eehk7Zd16nGA/owAmWKoheUm52_Rn5TBOqQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Weather and climate change - Met Office' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="03d20df5-9355-46b3-b1b0-65225c3af39d" CvElementArea="1558, 409, 32, 31" CvType="Icon" DesignTimeRectangle="1557, 408, 32, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='location-search-submit' tag='SPAN' type='' class='icon' aaname='Search' check:innerText='Search' /&gt;" Guid="7c281536-b7c9-468e-ab85-e233e20db59f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS8SURBVFhHrZj7TxRJEMf3T7zEeIoPXnfCsivsQ0D2jtUgnp6iGAwSEAMqnucFH6goKOed0QMRjW+NRoPiA1R+4RE50B/Kqprp3p6Z7plZZZNKdnv68elvVVf1bCQZKwG3pbBNNV0fbqsozpmcB9tiSrvsQ/2DLWJcTAPq6RsKKADCtU7eQKSc7yaECnY/t9rit5jD/XxZgXhyBJLmcr0JTm3/JiCTSm6gNALpzA9s2YDkIopCJiBq10FRe95ApvjJF8gEGx7IFayOI+wTwPqFi7WutBRy5wbTKVL6bauvgaNdHXDt3yF4eP8u9PedhNZ9u6A2Ua51RQrzktecbhPgXiCf5JVJx+HRg7tg+iwuLsKRQ205KBlPCIQ5KwxYaKCWpt9gbnbGCKM+uHVzBDYno8GZWeMNbwxpFNq9fYsD5O3rCThxrBt2NdZDXSoGbS1NcHngPHz5/Fn2e/b0sT+QG8ZeVx/ULqjJd2/lQhQvpprUmK2FiZfjsi9BG+tXXkBK54H+PrnA9atXAt3wa3Ul/L+wwGMoprZm0s4xAaUn8NjPz83y5LMzM1BLceE3oa3sH0cOyU2c7+vNAQXVwaDE+EvNRjnxjeFr/jB8HbGMjr/4jI0OLx/Q/r075MS9J3qCgRSo6Y8feOzEq/Fw4+xy4uuy5t3bJNDJv/ID+vhhise+nngZCkiUnsAYEkQj/10NNTHFWI3istERvatNFT8Q6P3UJDMtLHyCzKZ4KKgzvcelsvQ9zDU5p1DAPfdM759yco9KmjqYrUvycRefrZmU935O47C+peNYz8iU60io0jH57o1c4MK5U94d22AN9dXwavyF7Hvp4jnflwX1OisVSuBkOlMzbEvzTrkIfZGlY3sW6tJYOvY3wdCgs3QsLS3B5lRUAqlu0904A4HckKeVuHDQaX7Mz8/JVrqemF6z5KaVhBkxKeRpx0F7fm+A6Wkrv5g+//w9CLXpCnjx/Jkeij1C15FcImXF7FeqvIASOJDKR3dnG/SfPQVjN4fhyaMHcGVoAI73dEFDtobdT4p0HNjnYL5ze5TbeaPRIrRiNqGS1VYE4YHcsUaTG0y4qL212QF1784tBaiQAYQyifJCqEKLmCb1tBOQD4T6TI2ZzvYWB9TtsRusDC2eiBZCkqBYHQRCC0yMLLPGjFUf84oYI/p0dx5wQFH2ripfjxBkFphl6LLverfXXSfipXIDNHcKfyfRjh0+6IAavNCHUOuksVoY2E4ge7CEpN+mOwwpgc9pQdWStkLquDT1wXmOdrUzFKWFnQ0ZVqmqzKmSA0jsRv4RoAKqCzGMtXsTkEgbdIoIhqBIhZ7DHdCYrebTZZ0sy12VG9ayeYEURSSgXXN49y7L1SFSwVKU8ox6rOk71S0K3orS1VCy5gfYiIvTyWIgVCr+cwHaGoioadz9XRQ+VkwHI4qjUiStP7Jo91aOIRA6UQRD3wmgrHAlbFi/AsqLVkJFySqI/1SArluLfZRT5vnfxq7CjhhSoBgWjRZRqzbnFVLJTnSsDCtGQUt5pwgqy9ZBFEGixT9aQKgOPU/hM+kyVQ2GE8eXJnMpJGAcQHb6JxAaL2KDYOiNVbhGtMdKV0HMhiF1EghJMfQVbDVKt+i/lSIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="TopLeft" X="25" Y="24" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NGetText DisplayName="Get Text 'Today'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="3c129d3b-e96d-45b8-a1b3-879a397b7024" TextString="[currentTemp]" Version="V4">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="weather.metoffice.gov.uk/forecast/gfnhqhnts" CVScreenId="130c0a2e-32d4-473e-b410-bb0c2cc4ca57" ContentHash="yeNGDBhlNE-MGCbXIe3tFQ" CvTextArea="681, 476, 21, 16" CvType="AnyWordGroup" DesignTimeRectangle="682, 472, 12, 25" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-label='Maximum daytime temperature: 9 degrees Celsius;' tag='SPAN' type='' class='' /&gt;" Guid="dcd90418-4712-401a-bd9d-2d0b19876563" InformativeScreenshot="0d00bd956c0322d7252debe9c8732759.png" Reference="_QxAbkkw30eehk7Zd16nGA/ceZeOELSAUmCBekc9LrnKw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Strachan (Aberdeenshire) weather - Nearest forecast to AB31 (United Kingdom) - Met Office' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="130c0a2e-32d4-473e-b410-bb0c2cc4ca57" CvTextArea="679, 441, 69, 25" CvTextArgument="Today" CvType="Text" DesignTimeRectangle="682, 438, 64, 29" FuzzySelectorArgument="&lt;webctrl tag='TIME' type='' class='' aaname=' Today ' check:innerText='Today' /&gt;" Guid="cd0339f3-1fe0-4d1e-895f-3e03bb6ddc7a" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Today'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="3c129d3b-e96d-45b8-a1b3-879a397b7024" TextString="[currentWeather]" Version="V4">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="weather.metoffice.gov.uk/forecast/gfnhqhnts" CVScreenId="ec281573-f0aa-4814-99e8-2ae5dff8e562" ContentHash="dlgpV88WZUuJz2oxZ2UPgQ" CvTextArea="939, 408, 36, 13" CvType="AnyWordGroup" DesignTimeRectangle="940, 407, 35, 17" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='dayTab0' tag='SPAN' type='' class='' /&gt;" Guid="e4fe747d-eb47-40c0-b704-6c234b4f24f8" InformativeScreenshot="93351805cafc229602d73f85a86e78b2.png" Reference="_QxAbkkw30eehk7Zd16nGA/kyJFgh_h8U6o5qam_Pae1g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Strachan (Aberdeenshire) weather - Met Office' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="ec281573-f0aa-4814-99e8-2ae5dff8e562" CvTextArea="679, 409, 69, 25" CvTextArgument="Today" CvType="Text" DesignTimeRectangle="682, 406, 64, 29" FuzzySelectorArgument="&lt;webctrl tag='TIME' type='' class='' aaname=' Today ' check:innerText='Today' /&gt;" Guid="d18abfdd-3a67-4386-abf5-655103308725" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The weather in &quot; + userCity + &quot; is &quot; + currentTemp + &quot;° and it is &quot; + currentWeather]" />
+                  <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[CurrentWeather]" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;The weather in &quot; + userCity + &quot; is &quot; + currentTemp + &quot;° and it is &quot; + currentWeather]" />
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Edge" ContentHash="Dm0ms8xs4UKyil2qeLT2eg" IconBase64="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" InformativeScreenshot="ff16fdae8a5332e8b7a8d859991d3001.jpg" Reference="_QxAbkkw30eehk7Zd16nGA/rZ3owodK7kK_KMQqiWOOqg" Selector="&lt;html app='msedge.exe' title='Weather and climate change - Met Office' /&gt;" Url="https://www.metoffice.gov.uk/" Version="V2" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,168" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;An error occurred in getting the weather&quot;]" />
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </TryCatch.Finally>
+      </TryCatch>
+      <ui:ReadPDFText DisplayName="Read PDF Text" FileName="ContractTemplate.pdf" sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[templateContent]" />
+      <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[outputContent]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[templateContent.Replace("{{Name}}", userName).Replace("{{Address}}", userAddress).Replace("{{BusinessName}}", userBuisness).Replace("{{Weather}}", currentWeather)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="TempOutput.txt" sap:VirtualizedContainerService.HintSize="502,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_4" Text="[outputContent]" />
+      <udae:CreateEnvelope BusinessEntityName="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="Envelopes: Envelopes_PostEnvelopes" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Envelope" sap:VirtualizedContainerService.HintSize="502,269" sap2010:WorkflowViewState.IdRef="CreateEnvelope_1" PreConfiguredSelectedFieldsOnly="False" ScopeActivityType="uda:DocuSignScopeActivity" ShowAddMultipleFieldsButton="False" ShowAddSingleFieldCombobox="False" ShowArgumentValueColumn="True" ShowDirectionColumn="True" ShowGridDeleteButton="False">
+        <udae:CreateEnvelope.BusinessEntity>
+          <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="Create Envelope From Template">
+            <ubme:BusinessEntity.AllFields>
+              <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+            </ubme:BusinessEntity.AllFields>
+            <ubme:BusinessEntity.EntityMetadata>
+              <ubme:EntityMetadata Description="{x:Null}" PrimaryFields="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="Create Envelope From Template">
+                <ubme:EntityMetadata.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                    <x:Type Type="ud:EnvelopesOpenApiClient" x:Key="Client" />
+                  </scg:Dictionary>
+                </ubme:EntityMetadata.Metadata>
+              </ubme:EntityMetadata>
+            </ubme:BusinessEntity.EntityMetadata>
+            <ubme:BusinessEntity.SelectedFields>
+              <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
+            </ubme:BusinessEntity.SelectedFields>
+            <ubme:BusinessEntity.TelemetryProperties>
+              <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+            </ubme:BusinessEntity.TelemetryProperties>
+          </ubme:BusinessEntity>
+        </udae:CreateEnvelope.BusinessEntity>
+        <udae:CreateEnvelope.SelectedFields>
+          <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+            <usm:SwaggerEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account Id of the user." DisplayName="Account Id" FieldName="AccountId" FormDataType="ExpressionTextBox" sap2010:WorkflowViewState.IdRef="SwaggerEntityField`1_1" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False" />
+            <usm:SwaggerEntityField x:TypeArguments="ud:EnvelopeDefinition" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="ud:EnvelopeDefinition" DataType="EnvelopeDefinition" Description="The envelope object to create." DisplayName="Envelope Definition" FieldName="EnvelopeDefinition" FormDataType="ExpressionTextBox" sap2010:WorkflowViewState.IdRef="SwaggerEntityField`1_2" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False" />
+            <usm:SwaggerEntityField x:TypeArguments="x:Boolean" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="When true, users can define the routing order of recipients while sending documents for signature." DisplayName="Change Routing Order" FieldName="ChangeRoutingOrder" FormDataType="ExpressionTextBox" sap2010:WorkflowViewState.IdRef="SwaggerEntityField`1_3" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+            <usm:SwaggerEntityField x:TypeArguments="x:Boolean" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="When set to **true**, template roles will be merged, and empty recipients will be removed. This parameter applies when you create a draft envelope with multiple templates." DisplayName="Merge Roles On Draft" FieldName="MergeRolesOnDraft" FormDataType="ExpressionTextBox" sap2010:WorkflowViewState.IdRef="SwaggerEntityField`1_4" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+            <usm:SwaggerEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Id of the envelope." DisplayName="Envelope Id" FieldName="EnvelopeId" FormDataType="ExpressionTextBox" sap2010:WorkflowViewState.IdRef="SwaggerEntityField`1_5" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+            <usm:SwaggerEntityField x:TypeArguments="ud:EnvelopeSummary" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="ud:EnvelopeSummary" DataType="EnvelopeSummary" Description="This object describes an envelope." DisplayName="Envelope Summary" FieldName="EnvelopeSummary" FormDataType="ExpressionTextBox" sap2010:WorkflowViewState.IdRef="SwaggerEntityField`1_6" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+          </scg:List>
+        </udae:CreateEnvelope.SelectedFields>
+        <udae:CreateEnvelope.TelemetryProperties>
+          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+        </udae:CreateEnvelope.TelemetryProperties>
+      </udae:CreateEnvelope>
+      <p:WordApplicationScope SensitivityLabel="{x:Null}" DisplayName="Word Application Scope" FilePath="ContractTemplate.docx" sap:VirtualizedContainerService.HintSize="502,580" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1" SensitivityOperation="None">
+        <p:WordApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WordDocument">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,447" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:WordReadText DisplayName="Read Text" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="WordReadText_1" Text="[templateContent]" />
+              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[outputContent]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[templateContent.Replace("{{Name}}", userName).Replace("{{Address}}", userAddress).Replace("{{BusinessName}}", userBuisness).Replace("{{Weather}}", currentWeather)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="ContractOutput.docx" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[outputContent]" />
+            </Sequence>
+          </ActivityAction>
+        </p:WordApplicationScope.Body>
+      </p:WordApplicationScope>
+    </Sequence>
+  </Sequence>
+</Activity>
