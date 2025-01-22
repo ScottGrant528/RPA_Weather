@@ -1,0 +1,982 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main2" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ud="clr-namespace:UiPath.DocuSign;assembly=UiPath.DocuSign" xmlns:udia="clr-namespace:UiPath.Docusign.IntegrationService.Activities;assembly=UiPath.Docusign.IntegrationService.Activities" xmlns:udic="clr-namespace:UiPath.Docusign.IntegrationService.Client;assembly=UiPath.Docusign.IntegrationService" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.BAF.Models.Entity</x:String>
+      <x:String>UiPath.BAF.Models.CrudOperation</x:String>
+      <x:String>UiPath.BAF.Telemetry</x:String>
+      <x:String>BAFLayer</x:String>
+      <x:String>UiPath.DocuSign.Activities.Envelope</x:String>
+      <x:String>UiPath.DocuSign.Activities</x:String>
+      <x:String>UiPath.Swagger.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.DocuSign</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Docusign.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.CodeAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.FlowAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.Text</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics.Telemetry</x:String>
+      <x:String>Microsoft.CodeAnalysis.Operations</x:String>
+      <x:String>Microsoft.CodeAnalysis.Emit</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic.Syntax</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>UiPath.DocuSign.Enums</x:String>
+      <x:String>UiPath.Swagger.Enums</x:String>
+      <x:String>UiPath.Swagger.Models</x:String>
+      <x:String>UiPath.BAF.Models.Connection.APIConnection</x:String>
+      <x:String>UiPath.BAF.Models.Connection</x:String>
+      <x:String>UiPath.BAF.Models</x:String>
+      <x:String>UiPath.BAF.ServiceInterfaces</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Triggers</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.IntegrationCore.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Semantic.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.DocuSign</AssemblyReference>
+      <AssemblyReference>UiPath.BAFLayer.Activities.Packaging</AssemblyReference>
+      <AssemblyReference>UiPath.DocuSign.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Docusign.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Validation</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
+      <AssemblyReference>UiPath.Docusign.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>C6F5E364295_envelope.mhDsn3HO7oH1bW4vB2lltK71</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main2" sap:VirtualizedContainerService.HintSize="996,5123" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="userCity">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">AB314SD</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="currentWeather">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">no weather</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="userBuisness">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">user buisness</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="userAddress">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">user address</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="userName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">user name</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="outputContent" />
+      <Variable x:TypeArguments="x:String" Name="templateContent" />
+      <Variable x:TypeArguments="x:String" Name="userEmail">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">hiscott2000@gmail.com</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="ud:EnvelopeDefinition" Name="envelopeDefinition" />
+      <Variable x:TypeArguments="x:String" Name="envelopeIdOut" />
+      <Variable x:TypeArguments="x:String" Name="base64EncodedPDF" />
+      <Variable x:TypeArguments="x:String" Name="docuSignConnection" />
+      <Variable x:TypeArguments="x:String" Name="envelopeStatus" />
+      <Variable x:TypeArguments="sc:IEnumerable[]" Name="collectionSignedDoc" />
+      <Variable x:TypeArguments="upr:IResource" Name="signedDocument" />
+      <Variable x:TypeArguments="x:String" Name="envelopeSignedStatus" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Getting Weather Sequence" sap:VirtualizedContainerService.HintSize="520,2173" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,2081" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Weather and climate change - Met Office(" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1637" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3c129d3b-e96d-45b8-a1b3-879a397b7024" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1420" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="currentTemp">
+                      <Variable.Default>
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </Variable.Default>
+                    </Variable>
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Find a forecast'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="3c129d3b-e96d-45b8-a1b3-879a397b7024" Text="[userCity+ &quot;[k(Enter)]&quot;]" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="metoffice.gov.uk" DesignTimeRectangle="138, 349, 588, 51" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Weather and climate change - Met Office' role='document' /&gt;&lt;ctrl name='Weather and climate change' role='grouping' /&gt;&lt;ctrl name='Find a forecast' role='pane' /&gt;&lt;ctrl name='Search for a place, autocomplete also includes a &amp;apos;Use my locatio*' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Weather and climate change - Met Office' role='document' /&gt;&lt;ctrl name='Weather and climate change' role='grouping' /&gt;&lt;ctrl name='Find a forecast' role='pane' /&gt;&lt;ctrl name='Search for a place, autocomplete also includes a &amp;apos;Use my locatio*' role='combo box' automationid='' /&gt;" Guid="27025066-dfdd-41d0-9ed3-9c4d6768f987" InformativeScreenshot="2f7aea667cff0dd7b80f2599bdf6bdb8.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Weather and climate change - Met Office - Personal - Microsoft​ *' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="b6a34ad4-346d-4a79-a1b8-cebbc2b73e40" CvTextArea="346, 202, 226, 29" CvTextArgument="Find a forecast" CvType="Text" DesignTimeRectangle="138, 296, 641, 38" FullSelectorArgument="&lt;ctrl name='Weather and climate change - Met Office' role='document' /&gt;&lt;ctrl name='Weather and climate change' role='grouping' /&gt;&lt;ctrl name='Find a forecast' role='pane' /&gt;&lt;ctrl name='Find a forecast' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Weather and climate change - Met Office' role='document' /&gt;&lt;ctrl name='Weather and climate change' role='grouping' /&gt;&lt;ctrl name='Find a forecast' role='pane' /&gt;&lt;ctrl name='Find a forecast' role='grouping' automationid='' check:text='Find a forecast' /&gt;" Guid="775c0b54-05a3-4b70-9065-0ed45178eee1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAoUAAAAqCAYAAADF/CHGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAHsYSURBVHhetb0HkG3ZVab5ZgYQKvNMvpfe3czrTd70PvPZsgIkIUYMNKanGxrhJZpoYHCSYFA0yBtE4CRMN6AmWoU800hiEIimSmKEim4QIKoYUCmGUHUQ8RQQehGKWPP/a+119j7m5stXwI3442x/zr1377O/s7Y5Zza7i9KYPieDpQkZNqZlq7co+6tNubLdl8ONrgybs7K/1pTLWwPpLk7KoD4t24Nl2Rs2pFebkH5tUtPvrCyrdod12UQZhxsdOdzsIm9by7myO5Sr+6tyeXdFjrcHcnknHLdX5Crijrb6GsY0V/aKWgti/meitURJOMpk2HFQPl0ipMvSMM+JWi/Iwo8rlU97ZX+jrIOgqjDVplzejzp27W3KUdBh0MHupuyrNvS4t7Mpu6oN2dneVG3fRluZtkrazNwx3WZRW8mxUluyEaR+luvuoI1TytNvUYXrsu+zpcednS3Vrmt3S/aC9oMO+Pvtbcnh/pYcQccH23I56MrRtlw73pHrx7ty48qe3E9d3ZcHrh3Ig9T1A3no+qE8dONQHr7vCDpWPUTdOIKYhuldzE/taln3XUa5KL+s7ZG6D/H36TGqmOb68ZZcPzLdgJu67zTS9Jty42gTbghulfo35MbhhlynDtZxzOsaw4LoVu2vod2nQltA+6C0/aCtHlM7QznKaVUOgw62V2V/a1X2gna31kyba7KzuSrbGxCPqRhW0JZqGI/r1Ioet+FPZXFBWd4ThHOqsjDmK+atCsO16TWvVcjCdxLl40bly+fZwW9lWlft3k7bG7JH4d5hYliVNvJupK0Mc7FMCvelfSq7Z5XF+5lrH3kPXLi/UYcIN23ofVDviwdou+H+SMV7p91Lr2bakmuHUWwj5rZ4D4/pGVat6yeoKm0+D8+NYxDbHJXFJ2HFdno/dTnVtjxwJdWOPEhd3ZGHcK9RXbPjg0HuzuI9DPm8HJarCufVa8W1XUP/dDXpuy7vbWifd4zjEf8j1Jk91gHUp53NddRJyurmFrWxjmPUJvzURkHr1HqqNVmDVqm1NRlCPObcSEe3a6WggR7XcaTMbYJ71QW/u0M+zbO6Kv3hKsq19MyvQji1gnO7n+k0DGnp7gwGMmS8lmnl1xstaXd7Wf4B0jGuN1iRZqstrW5Xw4f4HZrttjRaLekirNXq6jX2Voaatg+1Ox2k7yBsRbr0I93S8pJMTIzL/Py8LNQW5Uxjdkx6ixOy3VsAEM7KwVodANiT6wCwPcDeCkDxcL0hV3f60gc4dhbHAHr0D2R3sCR7K3XZwZEwudaek80uywFYAiSPNrtQT44BfDweodxDHAmI7BQIglcAgnQfAzoJhSkM5juKCIapcpCnnccwUTne0pT9lUJnUxmuYmcVpJ0XyvJOLCeG5/OZeG53u/KQGFVVLlVMh4bHxpdKGyLFmyBvjtYgtVH6DRVu3lTt5h5BMYrgZIqAaECVh60yFObjAqjxOFIOgZC6EZYphhXBLw2riqNOvlb3m7YBh1QGjPidMlAEHB4ADClCooIiOxtC4uGOXAUcXoOuE+YUEvcjJAIOKcLgg9cJhBT8DFMRJJGW6SHNm4FhUQDDyybGaxr6bwOMlMOgKnR6lMNhUcUOp6wKKMwUoBDtvEoRDu14lUrAUKXtJW1HsS0dQRkYqtYy7aVwCFjMABHgpccMnII0LoEzAOEmVARCVQ4KPX3BP0pp3lRZmhQQeb54bXZ9rnKcS+Oz7+Yw6P4YpiCZQaGBYQkCiwpQp526y3/rLMwgL/rT8Oj3+w6POSjUe5M/mCV+xmWye5dCod7TDDZUcBMIXbz3pQ/NvB/afXIT0AKlgFeEQncjXIExKEIhASjmVwGMqCL4ZUIaB6dSOoSp1J+0JQJXgC6DQg9Hu0O4tdcEFF0IM0gEyLkC1JXAkNDHIwExQGJelv7BkD9TgE/eD3huXlcGhlTok6w/cjDk/416gDpFMEwfagwMozbXoQQGMyjMQHA9CG5Alx5zWk3c6wEMTRHqTAaCBmZFKCSwKbQl4KZpg58QRuAarm+oP4NCiDCmEIhz09+FvzccWpmAPebTPCwLaXqDoSwtNaXV7mrePsom6DG+2x8gvCMdHPUakb4LqCQUdgB73d5Ar4l5Or2+rOA83V5P2j3EIV0bYX2UWVuqydjYBZkYHwdktuRMfea8DJYm5WC4DKCbARC2FQoP1lqy0Z2X1ea07K8uy3p7Vnq1S0gzC4DryN6wLscbbT3SUkgL4VavJkcbHRXz7w4balEkHKrlcKMrx9t9uQpIuoFOgpZCAuM1ghMg8xhiHK2FhEBaEEzWYZQgkdJOYzXTZcBglHUkURaeQmMmAuCJQvpUWV52TCib51YB1hBmsBjCGF+Q5tG81boMQCQkmr+cPy8/XxESy7InNZNaEZObpt1U/enb/GZV9Ju2A2OExLx1kaBo2holgF0EsagSFPKo7gh1lWEVGg2HzEsrZNHt/qo8JrtO+w55WIyKwLgNUNwGJO4AEnflytGuguL14z2AIgAvgcQHFAIBilQGhkFuaWQ6BUSzQt53JQHAEhRGMLyeA0EDRYZdP4pQmHV6GRSG9HSrP8oBsBoSrfO5EaDQlXVmDoYj4DADQ0iBUNv2alBwl+p7qPPaRhwM16J27LgPUDE4JBQmUEelkJTBFEBMIY0WQlMuT6IczLm7QpsVYSPFslJ5WDFdIrue+B30e6Twh++v0g43CU+F+CIUuuWwBIoJ1KWKkBgAj51+hdwqGNPgvkK3K4Rl1kIcPczLGAmFQQaCBoA2ahLAMADhcQEIXQ51Bm2mDApTKRgm6R3oIA/Li5AUykzSVirAVAaHbCfelhS4IvhFQAxSf2x7GSCinWZWvQQKTcFqGKT+Iihm8QTJLaQxmZ9lwA8oVDjEuUaCIdssf3/+P/yvaDFknUIdNMu11U176EmgEH4Dw6gNCmFuHaTyVsMIjakcICMYlq2G5k+B0cGwGBbjmF4tfgA1y+tQaVBIGOsDzmgNpOindVCBkgAHKHSLICGv1e7J/PyStDt9lNkHOAYoHFpZBEBaCvurAEt8L+apN5uyXG9oWgfJdqcnPcIjARHlMLzZ6SgUdgGJtBSOXTiP8w/kTHv+ksyP3SUrAMOV+jggriaH603ZJ+T1F2VYn0b4lLTnxmS9NSdXd7py4wB/DoCRFkLC4PX9oYLh4XpH7kcluAK4O1onFBIYGwg3N8HwMqCQAHhlbwgABKQBDK/srkQoRFnecaQdhUotCYBEFf15QMzcWWcSZZ1JFSiaFPDQqaRuVeYvQGExvgiZuXCLy8ouKQ+EOSXnGJ2fcaGjLMjKYZqkTIjWlSNA52EQ3W5BdJWAMbkB+42ZcmtiBowAKIPFCImZAF/buOk7SBbBMLodABNlYXlgS+VQZ/JhaJP7T1axDFdM42XxuIXrScXvmA5FZ6C4Z6B45NbEIxtujpB4IPcT/qCc1VBFYAxwCBEoR8FhTgECU4uiw2IRDh0cfdg5g0Pe3HGMQ9BVQOgyi4R3QqeFwrSNEwiLbVgfFDM/41Kxgwl1HG1Fh5S3zWp4mACiDi2js9kFFLrY+VgHBDlMZaAVgTAPXnlpHI/uzmQWRiofPlq3A8eR8Xot4fr9++RkwHcnUBithjGsBIXhSBA0SIMAcHpfSOAuBTsqG4FAvIrpU38itxryqGFJOj1PIgVDl9634hSaI7gNDh0MCSfVUOhgmAKcQWESVhTjMmDMg2AKRDwq7BXSV8rLZXootiUqAGCVGJfEa1vM2qi14xQOUxEGKfUHWDQFeGQaVQRAAmIEwxh3f/agaNcTARe/AX8Lbbtm/DikZZftFMqs+6x3qJde/1hHzW8PKRxu1qHlDBDLVkQqD4Sr4WiwSIj0oeXVtdVENsSsgjuFxlQ5OCTYhSMtcwpwSRqCHkGO4SkUNgBnGk+YpEVPodAgstnqyvTUnHS7Axv2BTSurpkFsgu4W6ovy3KzIb0hLZMsc0Nqy3WZnplFPC2CfYVQtShyCHrFgJXnauG8y42Gft/lpUU5d/Ze6XS6hMKLOp9wu0cAnAQATsh6e0a2enOAwBnpIL41OyYry9Nq/TtYa8hGe172Vpbk8lZHAfLqbl8IiMebgD61MjYBl8uyBXDcGy6pe3tQkyPGAwoJgQTC6/urso8yOffwagi7BuA8qfPIdyIGhw6DJylveSh2LgZcJ6lsXUwhy+NDXAkW03xBTBPEjqxS20MTILQyPiieL72meG1HSRzdqQ53aGFBeJD5rZEaKJocHl3ZEI2qCIx86q8WYTF1V8HhlgJWAD24c4CoxzwIulKIs7CQJ1EKdyYHvnz+UfLrUDeOdq15KMxDcPyOtKwSmvfYQQIWOUeR0mFnQOIVQKIOOxP4CH4BAiMYVsAh5x4SDqsAUa2D7s9bEU0Gggy7D7o/Ef15oTNx5UCwqNgRRIuhuXNwWGrLJm+r2m7RLkvK4mL7zdqntpMhYNBlcHiwhYdWaA8g6NoFFJnlEHAUAC8PhVEZ/AW3K00TZSDpQEhFuKwCxGK8y+OK6SGeOxOv3yGPitC3lagyDB1pOW+UWW28I3YlYKiy4WKHMmv/ZVjL/Ap0IS+PhLsAeZm2KC+fCmFZmoLlUsuJIqTynBzxUDBM4TCBQioOGzugmdIpFaYANgo3iRzqEH8N6VQhLA+EtH4HhXDN5/khPWd6XvXbeU3VUGgPYbTMnV75NhtAkUL7NtlQsA45U+6HUiB0ORQqGIawtAy/L7j4HRQOKQKiWhBpPYz9DfuWffyXB/w/K5QNO1NaZ5M5iIBBG2pOgdCh0MHwJDlQGlSqVRGQlsrA0OYOEh4JcyuALboJdz0A3yogzS1/DoW00hECCXFusaNf4a3b1XCCI4eHuyhnfn5Bga7eDHMLV4Zq4bP5gAaFbn0kTNYbTZmcnJKF2gLKB5zivE1A4XK9Cbjs67WxXGoR+TnU3Gk35dy994Th46lzOnR8fbcjV3facmW7Dbhry+XNpqzWx6W3eFF2V5YR1pVruwPZ6MwAEs/LBoCRVsOdlUUA4YJsdmZlrTmlQ80H63UdbiZgMm6rNy9b/QUtl+B4BeVw+JhHzlskEN4HP8OuARQJe1nnkSrXgfjQcugkMrHjcOXjHAitg7HOx2DRZfFVisPDFDqiYKHgMK9K3al1LkJZWQh3mAtgV1bauaGzS9xZGNOo8nn9HD7XSuMLfs8T/Q6EEJ7WVEnYkUMi3N5w87CYWBQhn6dowz4GQjb0Y9aCPbWkEQ63MjjMQaFCVwSvDAYRnwKgpcmHxbgIg1GePgXD20Oh5dlIrtHcNveQR4M+H1Z2FYFXQVHzMM5ksBgXttiClm05PqRVz4BOh4455EwFKFSFMINDsx6W4c/Dgjw8AB+hMq8YprCploNU1nHkOxZXgMLQiSkQaqdl/nJb9nYMd7ASFmXxuC+oEFZoqzolBO3AoTBtKwRCh8J9wCBlUOjWQgAepaBHUIrQl6oSznKKQOcwSKXhUeX0WXjuXAij/7YC5OVUlSZVTGvf2aGwShWQmAGiqQhmKRAaCIY4hziXhhvkeZhbgVK3+wmG5i9fA+V5eFTrJUR4IFzw3qQjIBkQ2gKTKwEGaTX3tmLW8qhoMS8IcJUHx7wiHJrUUuhSIIpxGRSmZTgUavvh+cztUJhCHq8nbYfpNVYqxKd5NF+WJrZbBTm06wwQUwUApPUwZy28YnEOhbQamjbk/qMN9PfJ9BJ+/yAHZ7cgurSv0f8xGCKCVVHhUP/zUA9CXXXrIYebfXjZ4I7zCiMUMs4WsIT0UFzgsiGbOPo8Rs0PePNhal3IArnVkCA3AKytb2wCvHoKcmsbGwpsFMGPQGYLQ8x6yHBa/3Q+IUEP+Qh3hL9lwB3BcmmpJo1mU1qdHo62kIRASKgjANYAdoRNszYOFfIIkrWlRYSt6pzFOqBwsbaM/C1ptdvS7gAEA2jOLyxIfbkmE+MXNfxMY+Zu2Qa47Q5qcgigO1prKtBx0clg+ZK05wCA8G8PFgF7LdnoLciwNa0LUw4IgGvLgMUe3A0Z1CZ04QmtibQybvcXzZq40VIdrDfh50rkFQVAHUaGO5qZWUGso1BLgncgoRNJZVbCgpKOpCR0JA6Dxbg8GI5WCoUWhgqs4UGALhM7KhMBLfVn4AgQOxkKIYc/KnR2OSkQBqk/n987RhX9GlYhjysqAUOzJBIKXR5m4QqGcJvQaEPjdatjFsd0qgQgkw7ELIgbso0OgFa2LUCTK2cxpHJhCcShDJWCXFQWTwhEHhXc60HF9JkU5iK4ujvCXRKWCrBnMBisiJ4+y5eKecztQKmgCB0AFAmJlw847ByGnDM5yO0BDk0KkAjLgSB0HUBHyDSFoWWFPC/D9ACPhbBKIY1aEVGOKe1Y2HkVFaEw93CXyIaPEe5iGrRPFdoYH/YMBoe4d+CobWqIewmgkG0giHXegHAlgiHgL7UWZnAIUNpxwa8gCCjLgSEAjUphLgdvI3VSvOc/QTh3Xin8BaGTM9kQsw8zF4ebN5Ff52UFMa8fTegQ2aFqp5qGQwVA3EZHbKLblQe5KOuwmcbc+XjNG8r1sCIUunLXQOXivfwAqpBZDe1e5BZDm1NoUGgWwjCVAnXY4JAPPT5sGh+C/EEous0fQcpUBDuFwwA9CoC0Ega/D6dmbUTzJW2GbpeHBRm0WVvj0dtfqnTRSYTEJIxiWZkQn4PRVCgziKDnx1RmNTS5xdCshgEIAxQaGPJ8EH4HguF1wDLbe7bQLEgBMUCiw6FPC7GpIQEMWX+CWDd8oYoOLa/b8LLDIGUwCPgLbrUu0g3RTcujropmHI4bCpMQylOFcriAY7i6KsMVWvf6sgoQXAHocXhWLYiI57y+IYeHOYwL8NKhZ1oPAYIDAF1/QJijZbAnHB4mrC23CHtdqS3MK8jpopDlurRabVtljPJ1+BlpCYhcKc3jUq2uK5YXAYWdvq025jC05gUwEigJkHQTKhdqSzI7OyvTE+PSAnyeOVjj8O6SbHUXZbUxJcP6hFoCFy/dBci7pHBHK9/lnS7+yFUIwLY3kAdw1LmHAEMedwZcqLIoXGRCa6AuRNnq4o/HTXsb0AigvLLTl/tw4+cKxes4ctEJ3axM1ln404N1HDmhokQgdLEj8WOQdiY8RhUhsKjMYoi83iml0sqp4IfvkoBhSRkUFsWOK5WFqUUP8BUtiEkYFAEPHd1JCp3gHQtl5yEwDLchzuZkJQpQ51CYQZ4KeRK/TvAP0jB8X48z6yLDHA4JkCkgmjXRrIhxiFm3lSkoLk4J8AYRBiMshnAP8zQhzKEwwqLHef4IpBHiEuhL/Kk1sKyQNyujoFHh0A6F30KH3QHNnJvF1c6+Jc5VdGjXwvxEgt99ai00GQzSIkgghDg0nZMBouYrCbCHowOgh+egMAtn2sSioh2Pdz7Rb50Z27fd/PMK7TcNQ7uzY2jHaHeUAaEpA8KgFAoPFQhX5H9/5Xvkjz99U259XrLPrb+/KU997P3y1pd/ZQaHO4AmQiGPDoMatmFAmAfDFLhS0CvGpTpNmiCct1IZAJo2M0UgTKHQ3eoH3I2SAiGVdKYGgzEshbHMT6DLiZAXxE4VYVSaJgd5mg7hWXkxbmSaUdKyVyE7RwaFCRi6xTC1FBIM3WJHiNOhVMDgg6jfcX6dHR22DAzN7Q9FaV1PZRY/k1kE/wmFNhbhLZyTbTBcZw4Kk7gsLfMn5eWgkH7Pq3F05/OaFZHnSi2KrgiKpk2VwaGliSMLZIJ8H5+DQx2ZS8Ew9jGptdDmIUYrN+upQiEVII6i30HQxPqel62GRt3zMIIhjgaFNrS8ukrYG8pgOFD4a3XaAexWZXG5Jp1eV4d7OedvwLl7dYM6hUVaBJG+TeADFDYBiwS1VcAdrXezs9PI35HG0pLm4wKRer0hDYBcA2XUGnUZ4Pzdbg8w11aLI4eJa4C8xaVlqdWXAINNWazVkL6jYQRCWh+5MKUz6OmcxFqzIQu41osXzskcznnmoSv4Qw5wg93qyQ7gb709pfMIZ889S9qzZwF78zrs+yD+vAeO0bDWWrLdW5btfk1XJnP+IReScAsbW2TSVxi8gRs8//yruwNbcIJ8N/An2xwj/sk4J8SKQehjWGYtdBB0hYqSVhhT2okUOhQKlakKAkcrgmBR0ZrITimVh5+gEWBYgsGcGE8IOwUUQiXgq1SEPIJf6k/Do9I4gJxaDtkgTRn8+VNbuPFaQw1xaTooly/484BIJRbEMI+I1kO1ICbyIVwVYE4V/BkIpiLwqTZUWyr3ex4XYBCw5nLrXna+kTKIzKsqXV5lINyU1330ZkCY8PnkbyAc3x2/i89PzA03h0Usttp5L4M+F/dSvMY4QGQUwBJHjdN0gEUAnsFiIvqh+y6/Xj722XA94fP/vpfhEOOP3YISO1CXdyZFMDy5fRsQZlColsIECAtQaGC4IkeAwcOth+SNf/CZcJWjP5/95Hvk9S96OLMa5iyHQWWLYYStf1LhHJUqpU2hMAJgEQQzFSCwqKwzDB2pu0vgFeTp1I+OOJOHJTKw49HcRWUQ6aoo43SKMODD3IQEtxYaINo9iXDo8wopAgeHdRUMUUdZf2ktdKugwmEJDB0OTV7nUyhjmNb5knieoABg3i5SxfmGpxDKjW1s1Dns/J4uKkBfUK7coGK8AWOhDC3HjDsKiQh3ODQ5FJZ1H/jCtrTCfSD0+7wPxC2qHAxD3wgpHOI/zXYYwP+v1n4V67XXcYAg6sQG3OsutB1a/3xFc1b3mQ9H1iO3lFsatzQaEFIcTiYQNjtN6QKy6gC1BmFtbShTM1OyvLykwNfqd6U96APMatIEhA05fMz5f62GzC0CHvtcSEKwGyBuXS5eHNNtYvorfWkACMfGxgwKAYRzcwtqHeQehWvrm9JH3kUOATfruI62WhWnZmfV36LFcbmB83CVMuARcMh8XVwzrZDLSNNAnh6ubXLykkxOjcuZL71vV55zbRPCH3IwkOMN7lPYksvbXZsfuLok1+De6ixId+ESQHBWOgsTagnkCmMOC3OLmmu4UXPhCOcJXj9YxR+MCr2PG/Y29yUcKCRe582dfzTS0Up4/dCshqwELloQS1CYiQ0FR5RxGtm5qNixaOdykjxfkFXIinRQJQDmxA4sCKBXBYapNTHCYHADCE8cXlahE4R8CJlKYTFVFRi60vBMKN9kjS8dLo5gR3de+mTOhqrH1J9XhEkrP1WuLBx5Q6d24d7B0RQ33XaLoq9sToGrGgzzaSxdGQajyumr9Vp5rMByd/R5kuBn36UEhYjz8zjIOgirVRHXafMSt3W1s0HitlzR1c6EwSCCYwi7wniko8XkCjoM11XczK8dhyG1IMJhNRQWLIiJ9dCEzjJ0mt5hWkdV7gRNaL+hnVs7zLdfa0/VlsJj3RSfUDiQ73zkL+VWuMaTP5+TP/6pFXQo0AaVB8PMigg5GJag6xlIF7WgvEoV0laLnVUCguzAEKZxoTMri52bd5RROSBMOsOSQmdJyEvTe1gJ7OBW8Av+DAIL8ScpS3uCctechBMObTFMOEJ7es+xh1BanXzeWgRD1kEDHoU/6kqEPxPCgtIHoAyQgj8LT+McntgGtB1UCdfAoWW4TweFEfbMKmn5VABdX9Shbk8P5a63cG16fZq2QoRnVynOrt1EP8P5m8a+nv2+qgCGlMdZ2gCJ2b3A+mMaaTg6p1ur4b+jcYF9hW5cz/YaLMYGhqwbAQjRNtYy0U8LolkAi7JhZwPHFAQjEK7Lygq3iBlKG0DX6LTUKjc9Na0jVrMz0zofkJDHBRycFzg7MyMdQNhgsCL9LmCyjTy0HnY6UqNlsdtVy18N5XD/QFoaCXnnz18A5DUVBqcnp6XZaOkwNBeqcHh4enJKaouLcCO815GlxrLML87L0uKS9HoDqeM8tELOAihn5+cBmF09N0GW5Xdx/pmpCbl0aUzO9JemZNickdb8RZk++8VSm7hX9y3sLo4Lt6vRlcfwb7Sm5TIA8L6Dodx3uCL3E94U9giDYaEI/zSA4I0j3LwRfgwgPAIw0lpIKNQ/GuKWNYRIVgCvJLq/WagICnUerpUikac7Ch1HSVb5TPBnlYnXFCuWdjCpP0jPnUjDCZbuThQtiVZJq8EwFToz7dDgJggiLA49l0ExBcNRSsEwr2K4p42KFkQIafJKoZDpUygkuFlDNMvfaaDQw+yG7P4MDOE/pLTsNNzK4Y1cGzzceoPnER1GNlkdkOTWxLxV0WExAcOgrZIc7KLcclgVV63X/fNDoYKgXfPm9rZ9ly0qxOG3YH61JhIS97i5dtgzEXI4JBheQbhCocJjqgiItqrS4fD18v+UoDDOYzQopEXFlcLijkEiynE4jB1l2iHFdp5vwxDbW64tsc0U4BBQeLz9UvmvT4cLvN3n7/9IfnprRfYBhXsOhm415PGfGgoJfaNUlX6kAgSdVgQnCp1dpTw+TZOGBembJ9D2zA0pDLoSmEvlaTV94oc7B4Ae9+pHJV/7b8pjr8b5q75XURkI0B2thtFyaPcU3ocMCmktjJbCDJoSOHK4ixYvgKHK/CkApuncb3U9lpcqAhPrfAj3PgztQsXrUTF9qhjHNpSmSYEwP48xStNn7c/Fa7Bjdh4Cnl5TUrYrK9/BMxHnCaqSNhzivEz/3jb0bKCYQWOQ9/9pv0yDTTbnMIChrlTGf8y+hZZDnV+IusB5gQ55uW1pAHYqQh7CbiffrsbSr+u+fv2VgbS4+ANgxaHhhYUFQFZX6os1WQSocS4h5/p1AGGcH8gh3UazIa16Swb9gYIg5whO0rLYWpb+cEUXikxcugjIXJTOoA+YnNVtZjiMPDc1I5OXxmUJENkCABIKaws1BcAa0i/W5pFuQRrthszPzksDAEkorHNoG+dbQJoaoLGOaxjg2rv9ntRR7qVz5+T8PffImR7gj/MHJ+7+IqmNj8nS1AUc75X69HkhMHK4mItFbuz35T7AH/cvPAYc3tjn/MJ1nWdIMCT0GewZKF7Z6aoFkUB4bY/QuIY/lWn6qCBDeUCBkGF4aoAIefbnJ4AYZBXD5h7YHIR8PPMaQKLCZPJKHCtRWqFSf5Y2VNKcP6TxPFVyMLydqkGxCIWQ+h0MXYDAEcrB3qjwoDJQ5pWDwZy1kEqtebypAtoKAGdgaI2SFj6XgmDiHqWsXObPZFDILUT8aT8qwGGmEOawmMlAK8JbfrjWwpLh6GcklvM6+cg/GgpHDB8HYEzPVwRchdgAh3lLYhhuDkPNDokOihxyVikoBjA84lB0HGomGF47qoLCdF6hDTdHKyGH3SIYWpoAheh4Rg5leSeqnVBsi5mlH0Bo8wsh1PV00YmC4be/Xz4drs8/t/76/fLGb34I9XpFDl/wDfL9r/wZeddvPSoffedLde7hPkQo3EushQaFKxEIqSooRPhIFdOWBHhJ/Kn1Ty2AJTG9K4QFILI8PJo/J3SQJTn8UVXxmWyyfQqEVM46qO7Er2ktLEuveRgX3AVpOnbilVBYtG6OkpURvxfCIF6HgiHBIUAh7zcEQ26HEqEwgpUOl2q/k4e9E0ULYnBrf6V9lpWjZSXlZeF6LvZlMR3lUBj9dl16bRVhJmsvRWCLEOeK4VleLZPnTMIopIvtsBCXpfEy2S9a2dxuxmQQZ2GbWbgCo5ZpMvjz/jwFQ1xXEpf269nQsgI+/k/9X9lv0GoIoQ7sQLpgZH0NbcOGgilaCdcV8kxrgD4V3eo3EQaHnD+ocwhXkGdVuHCFcwoZ1+/11NrGRSPNJgCM8/rm5tV6x8UkHL5ttpuARopDvEhTb0i7TZBsqpsw2e62dJuber0pkxOXZJxvGem0NG5ufk7nIM7PzMj5e++VpaUlBUjOY6whfn52RtVqNHSPQl7r/Nyc1JCuCXDk1jWEwIXFeZlbmFOY7A37mnZhfl4mLo7J2XvukjOb7QlZa47L1Z2efMm1bXno6qY8fHVLnqPuLeGcw+t7PYAht6khIHYBh6s6x1BB74DAN1Tw4ybWNwCOTHu0wZXGBoUcViZAXtnu6SKUBy/jDz7gTd1g8T5a/Wh5DIoVIVYId1eBYK6iFKRPFyr63X2HYoUN5aUwWCUdblah46ISKCwqW+DiYBhksMgbVYTDMiTeHhZLAthVQaGWk/hLcJgphUKTLUyJUKhhCnbPULxZKwimQEjAS0HQngD96T+1AqTyIeds6DmndK4ioaloWcxDZDE8ysES7h0O4f7TQaErXgPAj0PZ9AfYi4pgSDks+lC5y/LZNUdL4rYc7O8AFHflOICiwaINMzsY2oKWCih8j4FgOvfQ5h+6AIMJEKbvXNbOR2V+B0MPj3OYrB2W2lAJCkP9fu2jkr/Mm/LRN3CeYV62OpkayMHmQK2FZjH01cm0Gq7kgPBOLYXVYJdXCoGpymkBODmF8ABEceGJKQ9LVAGYinIwUwgs+l0ehvJwLIJfPk0+TxUImhwkg3+UpTAAnp/bxO+VhGXfJ5wXcVx57ef3e4M/oGZQyPrlwMQ6x36HcHc5bLPCo7t1ODnCX04+tAx3BoVBxbQlOEykYYgrW9Rd5TyUth3tu3gcLb4+z1SMQ/vL3KEP9PICvJVlcREKqQB+I8LjSBvCXBpvo3iEPgPB2wjl8dwZHKLfZJ+mI1roN7Q/YZ+AOqFwGOoB61xWhwiIiLPhYhs+dlCkZTHbxgbAttLvyQaO25sbsgoo63fbMgBYdQF6jG/Wl6UFcYuXGuCLi1JoleNcQgKbWhUBZBxObrQa0oGbc/+WAJDdXketj4S/mZkpmZqcAOjNqsVwGWVy6LlWW0D4uA4x62vrcN5lxC/Mz8gM0rcAmNzqhpZJvrqO+bhVDc/VBpjWFuf02hothK/1cf6WzE5NysULZ+Xsvc+WM1udad2KhvsTHm7U8QMPAG0bCnEP4MihYi5A2R0sytXtjjxwDCBUUFyR+xUKh8jbVXFVMrenYVncw/A+bkQNIKQVke9KJhDef0g/bt4ARB45/zCDQYW4qDwYeiWIwFclpol+pFeAtLz5Cn5KsXKqO54jVm6TpSmHj56PaA3BoTC6eUw0AgxTVcJfldhR6pEAGCHQ4q0RFcHQNrhG46KQJw4ds7EBElXBX5Jb/apEcIzapxQAo3S4GDfuDOjYqIMUAtGQ9Y0U7g9KrYkcPsik5cZ346blOyjGoefiPEVT6vdtY8qqgMKbj8nri+kIZUHpOSJkhnCkNRCEH8fMH9xMk4dDwF8Q86g8D9wZLKpiHpbji1e4FY4uYAmLWI6g4/0tXe185bDaUmgrnZMVzakCLNqWH2E4Gh1MKu1wtDM7QexY0C7SthShkEPIXseHcvTSD8n/CNdnH0Dha4ogmAdCUxxGdnE42WHQgNBFIEv9+T0KDez8GOCtII+rUlV6E+DnBOAbZUlLrWwWn84vtLxZJ6kdZSINS2GPQhk5vynX2QZ/7IiDAIDpsHFJr3msBIUfeU0AR1UsKz2XqnDd9v3wu4XrZV6OJhAKOa9QF5oAUhwKfUjVgDBuTZO95i179y/CC6BYEuIySCyK5QelcJjKoJDHPPiNVC5dhMfYjuDPQV9BCncU+75ExX5R0+NYTAdFAExBsCzvB/NCu0afx6NDopXp7ijlBMS5GKbpkM+MLew/TbnhZdz7rR/xhUlmRbb64+3C/JyHaHMMWafXZQ0Q2ANsbazioRH30LWVgXSay9LrtaQL6NpYXQE0dqW5vAhom5OF2Sm1PHZagLG5eaRpSw8QyKHmbrsNGASoIWwV0DY9PSULiws6PF3DcW5qShrLy3qcnZuVOaher8lCbV6mpsZlYWEWoFmXLkBxhQtVGi2ZnpgAXC5IC9fTrNdl/NKYTE6MqyWT52216rK60pPa/CyAdUYaDaTl1jcIn7p0XsbO3iVn7gfUEdSOt7ixNFcR9xXoaBU8Wm8oDO4PlzSMQ8WcP3j/MX50pOecQoIg09GaeH2f7y7u2lAzYE+3n8Hx2m4f6Rk+wLGDstsaZlBp4jwCtf5BhEMHRFoRMwthCIuy4WeFNVaUXFxeWWWiOxfHck0el8nzjFRoCJrXKiXlFThT6MBSeeXNGsIJsvlTPCZugJr7c0PPqlHgGOAvk4fn40pASJN8omoITMQ0ms4g0AHRGqU9uVWrDGzmtps4VYTAKhkUxg5G/SwHxwiI1inoMSiesyxuB3M7GVC+phoKCV0lEQrNnUEhoMzhj/DoG2On4TmhjCyv5ncIBOy5EF4U02bQqCqm8bLtGgmL3ID8YO918tECFP7Vu82iyO1xqHSxylUeIYKgutHhuNgJZ9YZdDLp2x1UoTOj5UbffEDxhp+1hXwb8MUmti3NL8qfJ1vQ8PPkOx+KEJhoPyjzKxjiCBjUoeT1gWwHMNyCuwiCJ2otujfhLkPjySIEVoWbJTB1U+jMKO3IPCxIwegkWUe4qR1jcAdFa18Q2pSBX14GfwHYXAHCcsAX5G06tu1EI6EwlJlIO3O9Trv+9DvF70J/AEO4mY/nZLvnhtaXtS5aHSRIcd6rLigB2Nnr3kwEwYf0ncAFXds18R3B8Md3BBc3dU5FOAzncfG8ARQNFs3CGOXwaLBXEuKidTEJRzuyoXDLa/mDPC5RhL8ThN/MrYDeF6bufF/JvjCAXtbvmTvOO7T2fRUQZ/sKUwV/6BNtTYD1o/EcNC6lfgrXEcrMhpdDH6Z9DeqTvtkIR9YN1j3Wj/U11hWbh6j1m1AI9/pwIINeRzbQljlXcW3Yh78tQw7XdgFnUBvgtjg3LZ3GssyMX8SxIQOEL87PSR9gRmis15ekUavpMDO3mOGccG4gfWnsPACuqyuOZ6emcVxWaKNlcGFuBrA4C8i7KDMzE5qeFsIayl0B9NE6OQNYnJudRb5FXOuK9NtNmZ+eBIA2kIbgWsc9ZRUAWZf6Uk39S4DMPr5TfWlBLpy7h8PHM3Kwuogfri8Ps1KjMl/b6cvRWkN2eov6OjuCH+cTEgr5VhO+1o5Dw/cfDtV6eGWnJw8CFOm+uksL4YoCII/Me7BaR1xXOKTMPREJhNy/kFDIiaW+TD1biQQQNNHtlsIU5O5cWkF4TJSLp0oVqqik0mkeVLisgXgaVv6iQiXOKnMhHmEpBJrwewb3lf1Ve/JxoYKXO8YoH4bOBLArg+JoKCwqD4aEPg8zd9Fvjc4aXlEKfzy66M80Gs6yzoPuUfI0RYX4Urm4RtXIuLipNv0KkZ4nhLni3MVRUOjQ6ErhMIQRLAFfrtdXzCk0UAx6bdpx3pLHfxphL/hBectvPy5P/V2y7vbzt+Tm335CPvhzPyDPw/kMIA34ynqu/ODPfVA+8bfJvn4h/2//wo/I1+++VkqX9a5NOfRNgfdpVeTR9oFz6TtleVS3weA3/tjPyYc+/in57D/k1wjf+uzT8ue/8/Pyym8IcIi0Pi3D6n6+/vvDEOvxv/7uV8gvvvdR+fNPF/+EUZ+/lHc5DCoQQs//HnnrB/8Iv+Hncnsbyi3ubfhb8paXvjCxGhYh8T/LEyE5P5/41YcMBv/FS+Vtv/eXctO/6uc/J0/9l+8DsKWgN5R/8eNvl8f+4jMxHT+3Pic3n3xUfuN13yhflqUF5OC4kclWSbq+urIc25vx57//OQGSzCriMqAKet43yWvf/qg8kdYDfm6hLjz5mLzj9d8kz2VnqTL4ysAQbc701fKjb3m/PP4Uysj/xbpP5NNPflw+/GuvkW/9cofBr5aXvOlt8sGPPCFPn/Lvu/mRVyfn9+uPQJgPw++WfG9fmcwHVy400UUSBCJCE6DKodAALoAeoM8BkP3lw9dND1Eh3OAwwKLmiWKYQWMKh9EaqcogkdcQAbEoB8ScNTHxZ9bGnPJQ6O5UTGfTN9CvZW4o7e8KfV4EwYrwQvpS/0c5IKbuoKwvRFvPydMgTzyvGYpMwdiDOKbzewf7RO/XdKRqezXCoT40DAFUfQM/1h+0L7fQEwppadtYZbsfGhR2W4DCjnSbADiA1fpKV5bmp6W1vCD1hVlZmp2WtUEH/pr0AGnDAaAP7toc4hbm1YLHNku4HL94HgDXlObykkxxocn8LCCyrRbH2vwM0s/K3MykzM9OAigXcM6GWv0IoLNTl2QR52o3lpBvWjYGPbTBVVmemwIwIm2rptfUa9cVIGlRbCzPS7OxKC1uZwNQ5RDymebMPbK7Mo8fzlYIc6/By5t8pV0/g7NruysAurZa+yjfiuY+gB+3rKGVkRbG/ZWaWhC5EOV4owEQbAtfc7fdn0f+huoaoPE6rZO0DOKPIxDqjucKhkEZFLoMDg0Q3XpoqppbWKUiBBZ1eyiMcx5z4bfNF2VPNgkUZpXaYNEhMBMqr3Z8AQrTOIPDRFl4udOMCsPRquhmA4lhJt9BPsJhfMpiY4qwOFo5IEz9wR3h0IeVA3QVAS0oB4C3lUNaEMtNAC+6g5AmJw/L0kQoTKVl4XxRo6Cw4pqqhHPZEO4oKKQ10MBuJweF6Gj/9im5WbCOFT+3/uYD8hMvIHSaJTInAOWv/9lteuObT8nT/xDc4UMoPAAQHvpQcwDEy/tbQQkQwv9VP/zL8oefLlBC1efW0/IHb/oyA0LWa63b+TodreOmd/9VyHvqT4RC6t/+4h/IU6e4tJv//Vfkh55LMBwkgFiGQlCh/MB/+tPK/+XmY68KnQ1g5bmvkPf9xe1JiItlfvy5DoapCInQqcoBkP7eG+VrCE5BGQxufpX8+LufuG094ufmn/2avDiAFxVhEPquX5LHT7v6Gw8dj/8S8z0iT4ag036KUBiHy5MwyGHQZGEEWFqI+CCqq495TyZEAIAcChUGM6Aj7Dn47QEG86oCQ7USOghqGQEMFQZ5DjsPj8VhaAtP4DBTCA9WRYfDoooQ6TopXRpePWQ9YlRNw4LwO2bKwj1dUJoGyvrERJVp2F+OULl/5rW4QhlIZ5Bp9xPr/2y+PA0T+4AoWhD5sLc+BFTxQWJtYBDIeoW2Nui1RMEQ0LgKwCMQDjotAOAcoGsR/dgGQLEhjRqADse5iYsy7DWk2wCUAeTWUG6vBfDjMC/SrwAYe0jHsmZpEQTw9Tt1wNwMwG9eIXOIcxIwFxHXay3L8uKMLAL2Bp2mqjY3IZfO3YVzLAH+AHlLOBe3w0HeLoCxjzQNACGhstOqSw/X2+JQ9OyE+mkpJLBOXrogZ/imksMNezPJdnderXoEvMyS5wCGP9LmAtr8QVoKuRJZ8wH6qNXGpA41b/fwRZqTstmZka3enILh8WYTQNhT2CQU+kaVBoKskAaEfq7TQqEpsSZSvNZUHl5QWkYpTyKrxCkUVun2aUoWw0Qp8FlY8oR0hyoBI294paO5HQxTIEx1jDgFQnUHuR9wlymkrYLDstaDhTHCoGlDlQcvfw0eAYzgZNAXYc1gKucPYQ5ZHs73MafpXJ7egTDLm1MKfifpJCh0MCwCIvx+HYlGQWGmAhSe9nPrz35Znp+Wo/pOeceTp6Chio9CYW4OolkKdR5iJgLhl8nr3vdEYQHIbT63npD3/Du7gUcrOetmqLeoR6meERRyS6atFfnud552X0P73Pr/PiSvf95AdgIUmgpQeMIng8LnvkoeOy1A8fN3j8prS2BIIHz1HZVDoHouAcmBECD32N/eWR1gGc9TwCIUutAG/i4kONXnpnzklc8UCl8DwDOLZW44OYjXs0XlwpE+wKtON0H74z2JdYyWQrWgsU9yy53DYAKFD2dQuB80CgoT62CqDPwijGk/CH8GhoTEEhQGIMwU8o1SLi+FPFXpikJaBcMAguk8R5vOhb4xJ4YZMJqs78ysdd6PpmKfmbqfifif4b5Axb62Il2FHD61z+Q9hf0a4JD9G6cyba/30bYBg2v9zDLoUEjrIMGQ1j3OI+TwcXOJQ7kzGsd0nFdIgJsZPy/N+qz028tSD/GDdku6dcCaAlpd2s0aALIlizOTMj1xXjaGHekgP0Fwrd9C3iUA5LzMT12SNuCuCeCcunQWxznZWu0CAGdl+uJZ6QE8G4uzMuy0ZQlQ2QSEOlQ2AJhN5O3inK36ks6FJFhy+HiI77KGdBMXz8mZL33gUB7An0oL3+EaN6uuyfEWwJDzAgFuNry7oZX4ITzZcPj4BheZAOzUvY8bYXdW1ltTAMMFOVpv6jzETYTRbQtPunIVRw4lc/4iF7BYuYl1EH4FNFQQX5GsQBjOn4JfWTG+CHtZfK6MIIa5svBQyXEdqawipRUv1e3iTV55i7q6b29qoDQsVNZURfCrFDpJ12gwDO6skw2dqyoPhKZyXA4O0RFnfg1L/HRX6AhxEQ7LsreaUPH1d/6GExXdu3ybh7vz2qOQzhTTHXieLC5KQYyA5m7k4zY2EdyK/hhuMHkyFL4hQG0ldCLORHdUFRS6FVH1DKFQ5Gn58I8ABGltpFDWS977VIi788+T77LfkK8o5P9Cq+GRQ+FBFDfI/onfuxP6sc+tj/+kDR1rnQ1CHarSnUPhE/JuzqH9keLClNN9bn7kVfL8DW5ZE6HwdmCjr9j7iz+SD77uG9B5PCw///jnQszpP7ce/xkdSo7Dx8+RX/7EnZZzSz7xH74kWtWe/0vyiTt+LviU/Oa3xfm8CoX/8U9D3Ck/n/9T+Q8KaM8MCnNzESGHQwNVg79MCRB6GubhAyjvS5zmoMPHgCezEnKOIAEvBb4IhM/JoNDAMJWDYQqF6s+AMQ+GDmMpDJahkGJYRbiXkZTliu8g9nKTsDRtrgxaTKuU9pfVygNiqqRPTdxZGNp5tUI/mqbV9Gkfm6a/M6kRRu8h3leiTmwCBIdt2V7roZ0OAGo9beMERLXQEe46XHSyAvDqS7dZ1yFhDvVurg2l3eAqZFrjJmVhflw6jUWAGoeVa9KpAwYBhV3EEwaHvY7CXmtpTkGNQ7yEQR1+nptU6Bv2mjguAAwvysL0RcDmWZkBQA7aNRl2l2V2/IIsABoJmhsrA5QHCFyckS7O20T+HsCz3aC1cErqi3NqNaSlcHFhRtbwHTjv8dzdz5IzNwBp1zlUDMh76Ar+NBy5Cpnz/wh99x+vofJyiJd/Ni2HawqHN/a4vUxLxWFjDhfrKmQuJAFg0qrI9HoE5HF/Qm5Pw/wepsCnlQfgRhHgFEQDyFUqpCsJ5ajMXdIpKrKXVYZCXjOOmehP5y6MVv5JKK28DoUEwQiFhLsUGE2stNFfgkEXKnQODE+hCH2jRZAzN6AQsEYYjG7GBwh8Jgrl2bC0KQ+JG5kcFA/5/t8RMoDkMVUES5UCTF4pIJoAew5fo0RIVLfDHfNVQOEpPzc/+horK6gMhY+EuHDeEhTekqcefZv81Eu/U77O0/zL75Sf+u2nShawpz/0A7GcnZ+UxwtDwvL5m/Lke39SXvIvba7j7gteJN/7k78hH3my/OWefCfiA+DakDtuqP5f7W2Y5TBYDy+/8Oflv/Fcn78l/+MvH5Pf+fU3y4/+u68B9HERytfI9/7UB6U0svzZx+TNBzavkHvJmeiu1mUKdasEiE++PVtElT2kwH+882/k3SUa+Zz8j4+9XX76u75SDraGsv/8b5RX/NqjFUPLn5EPv8ygUFUFhfgtn/6LR+V9P/9S+Zbn+vwkakW2XvohIHrh8/Sfym+88dvkazTNV8qL3/h2+UQp0Wfk916aQOGrilu44HPzCXlfmIf4Zd/0MnnbRz5TtoQ+/bvyowAjt6C9+Lc+ZeF/9yl5/MOPyFte+d3ZnL/nf/PL5dcfL///T73nS3NQ9g2/Gcrwz6c/ID/1XV+dS0Moe/43f7f80JveJr/566+Rb03iVCMWmnheT2dW9ygP97mNmZ9HtSaa+H1TeCTQ8qGO9xmCIbdO0vcfByiMYEjYi1BYJYLiczSe6SMYRqiM4WY1pEUyWgbdrfCWuE10p8qHp2V4XAqARWkah0D3a1hqsInKoNBV2Y9WqwoMtY/U/vC0Qv9ZyK9lUJXpTyc1vuC+wX7TF88cb6P9rbRsVwLcA9Z6DdkBIHLHja1hFzBWB9wtZrCoVj9obmpcVnptadQIcBM6BLwwa1DYay7LMucRtluAvq5C4aDVlC1AJIGwvjitUEkrYxcQZxB4CeUu4l7Qx7n6sgiQW5geQ7pLMnnxXvgvad6FafrP4pqWdOh7pUOLICAQkMm5g31cL4edazhHDXC6iPMQEGenx3VLnc3VoUxx+PhosylXdjuoCOv65MLJsw+iUtzYHyos0tJn+xD2dUHJQ5fxJLW7IpvdaTleX9LX4nERyQOAveP1ploHOez8IOdLKNwRgri59Sr+PNuOhrCpq5MVtniMFkG1ChbFChWUgqCZrRN5JQmV0PO5OwtL0qncn1OEPr6O75lCYaZcfq+M+G0Ac9f4m1BuKbytAI97CUjSnVMKhauJikCYzMfKwhJ5x1kpB7rEn8BeZlEshKdSsFQ38lOhnBQQ+fJ6rg7UIyEjHEeJEFIFiwaWwQIJaPH5ixkgIp6ra9XKSGXwxWNeZYBM4/8poNBgrRIKA3ypSlD4hLwjA71UXya/+TchiX8UMEP8r3wiBPrnlvzZr3wZ4mi9pHhNQRWWUIdCA8JUNvzvMG7/3aa88NteJP8a/1PVghTqJR8oWi2fkHfjJq3Ah/pShEAP9ziDwoqh5L96BOdPpzEAEAmJFRtdf/ajr5YXbnMPTmiLGhocvrwMcbQWctsaA8MiFN6Ux14XAFAhL9WKvPljBeve3/+R/HwOHE2bz/0Z+fjfhzThw+Fnh8KfK1obP/8ped+LHRrjfLrv/NU/zdcZpvtudHJuLdz8KvmWF30pIMosaJn1L/P/nDxevI5grcvg7J35AfRbf/JL8rVZ/lOqCgpfa9b2FAKjbBiY9bCyPAow6PubpjCob71gHNKYxZAPIARDApK/mYegFSHxoRFQ+JwbQam1sEoJEBoUBjBMFeDOoHC0MhB0ZWUA/LJ5i1E5KMysgkWNhkI35th0rqJGWxL/KaDQ8qRl5VWVx+WwRwDMwkKfSqOKgyHlcxF3hx3ZX++iP0Ub7Ndla9CAG30W7hu7qwDD5qKsAhY5CtIHxK33WwC/JRUhcfwcoG0GkFebBawtKJjVAYWDQVfnFnKOIcW3ddFSWJudlKnJ89JpL+mCEc45XF7g3MJp6XfrOn+xoVvdXFKgW5qfBDSOy8Vz99jw9OKsjF88h7o8lNVuUxZmJmR+8pLONVxFXoJgbX5aZiYu6vxEpp8aH9NFJlxI0wGknuGbRwhrrDys7M+5caCVmpWKkMgKS6g73mrJEQBwpz8vw/pF2erOAAb53uMm/nAQNvchXLfX4GkFAjxqZcCfeD/0ACoadT8qDTevfgDyOYN0ayX1CneCUihUoezMyqgV5vTKWfE0zC15JvVnYSGdKu9PyyqdI8SXlOQ/WXb+PBRSDpG3gUJ0fDkh3sPTCfpVyq9OLsohjvCITjhV6KBVRb8K5eMaMhhEWIRMyiEvQCGOqfUwD40nycsxef7MYqjKWxJ9qFkhMcBNDopKIlil/n8MFL42lGeqgkKzYIbrqoDCd4brKFo6R1sdN+SVjxbi/uHj8tYQp/LfQqH5tWUofJd11va72RCy/4bxN45w7v+Pvl6MIiAGcRPh49c9Vph3CCj0OOZjfSlKy8urCgpZX/NgCD1SnAX4Gfn9l9o+nLY5OxWgcOtheWfRFPj0h+SHN/gGFO5pWIbCj7zaF6FwXhKHmH0j7B+Txwpz757+ne+zOI13KLT8P/g7nwmpwuep98uLFPpeUSrn1uM/qzCYFzfnXZPv+IWPy02ufv7YI/LjX2vzCRUKMzCMIGXwZPu4edg7Ct9fH2YQngHat79XSpMRuIL90x+XDz/yc/ITwWroEKd1DG4FNC+jVLdvykdfG+ohhTRFZedXsUwr1+XXP1IhHR9mWE85/YGdPbdZ4lY1+naesG8hwW6UtZB9aD4M6dTC6EDo1scIhREMRwNiHu4cCgl3SbxDXS7tCfL02vcW/Xllw8cF2KNSMCv684p9YNrPWZjFp+FFpflVALd0n8KTlFvkqe4gB0JK+1ZaDK0fJRDuDFvaZx5u9YOb8bi/rSEOkDhsLQASB7IL/tlea8rWSlM6gEDe2+anxmTy/N3S4fBtYx7QNS8NQB6HjGn5a9GKOD0Bf1PWAIocLp4C1C0tTMvGal8tjrX5KRkfOyvLADhCW2NxRuYmL+j8Q8Ie89/9xV+gC0mGg47ce9cXADIHgNW2TI6dUyjk/EIOUTeXFpBvXCZxDq5gbjU4vD2lQ9qcK9kBzJ7hcC4tegZcEH9c/ADX8aPYFjW7+ko6bj9zsAYo7M3L0dqy7mNIWHz46qZuVs0hY1oHH0IF5ptQdINrxDMvrYvcs5AAaEDIc9m8QVolmUchERWOYMg8riIU+hNKfEoJQBhUqjQunD8HgZkMuvLihtpU0X1aFcsvnieNv51iPlbg1O3+CIh0U6zcqLhw+7ByzmIIqONmv1EeFnU7KCxO8FehseRVFUYRClEO4s1CmO/Mc2DHG3SViukyeWefhqVQaBYrUwSVFAxdEXAiiFEOS3nw8vB/biiM592rhEKL8/l9nvYNxbL+6jcC5G3KO4vw9Dfvk6/Q720LR/Iq71PIOYVVvx/F35fDxyq6EfbCH/ol+f1PPi2fLYxl3vqHW/LZTz8h/+2PnygMcwIK8d+ldaOyrhT0rkpLYTndm4q/DaD4F3Kr4wMYKhQO5Q3FP/jv/0jeyrefnACFHF4iFGarlRX83o5v9o/43HxUXqtQWC7nU+9+TgKDZTBMZVBoizW2Nr9afuI9H89vacTPrVty6+bT8uSfPFYaylYoTOCL+q53Fv/DwodD6n/yAXnrj3w10nt7Cm2IZVRB4evQJhFfVFygFtuozfN1v4FeHhT9CAUgVCiFdON7+Gk15L2BdZdwaFvVGIyptZD9YwkMD+Q5UC4sDDmbQj4XywmqAkWfd1iCwhTgimFpulFK86fK4stQSFVBYbm/ZZiHu/tkaItpq+NVjFNDTXDn4r382Efm42OfWS3rMzUtruNgoyuXd1bQFw7lcLMnB5t9hPXUUni8tYJ0uD+udWWjW5P1zoLsDpuARjz0DeqAREAfxD1TVzt1uXTvF0l9dlzWu3VpLkzJ4tQF6TcXZGOFi00AhVMXpQ043FkdqKWRQ8hjZ79YLX0bw4G0G4syNX5e5pBuFfGt5Tm5ePYumZm4BJhsq9Xvwr13y+SlMZ3D2Fya13mEa8O2TAMe5wCBfUBoY2kRYDmvw9u0Ds7OTEinw61pZqQ2N6Vb5SwvzsmZA5DtwbqJ284c48c4xJflO48PQb7HW1wxvIIj9yPsA/C25Euu76Cyo8Jexo2Z288AEB++tokKvYUj4q5u48/lkDPfjkJL4VAXmnAY+v5jG0YmiBIQ3WqYWQsDHN5eo0DRLIZF2XBwWmFOpwy4OLxLfyE+lcZr2oK/JIbfXrmymS/1hzCLGyV/8glw6MrgMAXDIiDSmhikUEnAM5l/fUT4KBBMFfNQ3sGnquq8T6cqKKROhsJMeALknntxPmJUCokuB6usM6qCQq4+RlwGjt45pWEAt6JKUAioyTpDnr/CovbOcF12zYC4oCoo9LgyPDEO+QGB3GYmr9eWN6/WfQrjb6jD/Yl8ixpaAv/du24DC5WfJ+Rd+E99D8zTqgoK3VqsacL1laAQ/9cbc1AI6T6a4Y04heFRrmB+p74Sbyg7AL1KKAQwKgzmVATIO/wEKNysgMIn3pGCoA0h29sZghwQAYSUrj5+3p2tXvZPFRRSX/fK98qfnWI1880/eZt8F9LHNoT6XarbhELW6fwDR/GhTi3U3kZc+K81Tv0Ge8U0ljfEMT2OLj7M+EKp60eEM7PmGcQR7gz4UjDMy4aSK8V8JUhk2UFuNaQ1MAXEE4AuZzksqipfJvarOGq6Yn9rqhoajjCYFwHL3HnYS9MU5WlGi/1fVbgp7fuq4l3RYmiK4Sgf10EQJBRe3hmoDuDfX2sr/O2scAgZ54B2hy1A4Lxs9euy2V3S+PbiRQVDlrHeXZbpsbtkbvysDj8PGnNSIxTWZ2QNQLbSWpDW/DjyNmWzZ/MXN1aaMn7u2QDFuTBvcR4gOCOXLtwlbbjXVtpy8dy9aj3cXOvrCuRzdz1LarPTsjQ/q1ssTSKOC1JoPbx08Zz0Og2pIx2BUec6zkzJ+KVzsrw8izRzMj0xplvTcJPrM73ahNwAXDwHMKfzAAlqgDoS+eWdHn4o/EgALRte3kGlAPihMnOxyeFaHeDY1KcZTqol6HGFMReUcINrrjTmcDK3uOHbTq7t8dV2/WABpHXSpKuRFQYZjiPdVXCIMLMk5hXTMD/hECAY5G6fIxiHg0crVqxUBbDTdIWw2ypfXn7INy+Nz+VNFcvISfOl5yAEWjkmB0PzX9kDBOYUYFEVwE8tjmXpyuWSLL3N8cqD32gZKOahkKBoGg15o5TPk5Yb00SAiTJYUDdAIR9HQAqCP4KiuRXQ0LHcDgrT+Yp5mTWPcOmwSVWDnJ8bqoDCdyXxDnK87jdWlOWdagme/uZ98r8iPLPwQRHsXit/WAGFOvyL7xaV/Pb8f6nveG9p7t7pPvheADPb49L/pyj/X/Pha7eBQgBhUOm3UUshQSJRBglr5f/l7z8ub90KL9/fvDMo/EdZCv/6PfItOrxchsKn/ss3KgyuJ4qv7KrWT37sznGdn6oVwJTCIY5f/s0vl7c+8rvy+JNP5zfTTj43H32NtoVs2sGJUMi6nSppq8GdtREPgyxvVL6MWBbru7o1HY+hDezbULK91xvQpWBIVcMhLYY6HUvdphIUqmwj7CoLYgaFkFoOHRSLYBigz4GwEgrT9Ll+M8rmDOb9ORWBsACFBKrMDchKLYV5ebynMf/t5f10OW4U6KV7FWbx6KO0j8zCkn4Tfs4hpJHkcLMrBxsduFcyKNzo1BT4zHiyLtuAuLXWnAwbU7LenpXV9oLUZy/J5e0VWW0uyOyls3L+ri+UjV4NZbVkeWZMuosTMmzOyqA+LauAyr21rgLk5qCB8lpy7tn/s9Tnp2QTZS/PXZIG0tdmxmUaZdXmxgF998il88+WjWFb1gdtQOEXAg7ndf6hb0Fz4e5n6UIVvr6uuTSncxppQeSQM/dQrNdmpI5wWgcnxs7phtd1QOOZVVzYGi5qvbMoR1uEQALDCv7sNd13iZX6Qa2onE/BYeEdxOPm1+NbUFb1qYavvntQYQx/LiCQIKgLSPhD48fke5IZTlCktfCBK6hwCoIb6iaMutxi6GDoE2KjqsIgVFiryARDg0GXWQ/t3cpmNYRwbam0ouH7OGDRzUUgadhpxN+mKqwK/ExW+XLKgVpRKbhVy8pNgLAQfztpfnz3Khh0jYLB0yiFwaLikPI/RgFGCkqhMC+E4dy0GrEjcAuS+61zcBUhwS0PrteU3vihW9Jo3ghsI6UQZ6oCOYdTBb4qKPQODUqhrmQNQ1kWV2EpAxT94j47QQfBqMv7VVBIa2AEQfuNy//Li99fXJX6fnn5C0I8YMvfvX34hkfL3ytAYc56F+RTCvJhgMKiGS6BwnQqwkFpTuHT8vsvC+mg/P/9peVyn/5d+WFAISeLV0MhLYgUF6KE+YKqV5T283v6d743m0NIcHT3ySrPTZRP/KJZCHEeVdFSWNDmxs8WFrLcQhFfpXMMOa/QXw23vfkl8pt/HZKED/cqjDAYFm9k/rK4ivktH/5U3mIc5rEqGFKVUJi2Q2tP+mCDeulAZ1AYwrM4hls7sHhLx22TVAxnWAjXPJqXlnS2y3gutgl/HZ5vW+NyOHRAjJbDIgQWFd6KUgRDSEFQgbAAhQTFKvDzsBwAmmjQifL+MiqFPfUXwlKNXqAJCFMBwhwAPb3mMXl8SQCy0yoC3WgRBnNh6H/MWJIXoVD7bj2uydH2wIaNNzinsKmWQs4fJBD2l6ZtbiHuW5dxn2G/vNWvye6gjjR1gGNDlmbO61Dyle1VaczPytkv/kJpL04CDJekuzwlS9P3yMLEXdJbBhS2wV/gqS4AcWHqvOxvDGR2/KxMXbxHVsBmQ0DmAJzWmJ+QBgCxtTguzflxaS1MyVqX0Dgt9z77i+TC2bul21rWt6nsor2uDVrSaczLzMRZmZ26IKsrHV2o0m81FBA3V7u6X+HYvfcoOHLT6xrKPHMEEj7iF+8v65faHSzLRnsO9DqjZMsvtokvsrfakD38OOutBenMX0SaRXzhgQ4p01q4ix/l8hbfVkKoWIG7L9fwYz2ISmpPPKjUADpdcQwpvNGPI1UNgEGERVcI41xEV0zrlkNW6rzMamjHnFCBHRTjU4jJFoMQDPkEUYa9KmthEQoJfQ6ABl0R7gy+EDYKCNPwO1Fyjky5eA/PpzkdDJr8tWOZkji3MLqK4GdDz6ZiXGpFzC0koNA5Z5BRikvCNA2PeaUWxDuRQ0QKHXkZECo07FZA4Wcfkzdqh1TQ/hY6pSptq970hxUgF9Lo6+ReX4bCd3tcJoLclvxkRVmX0bmpfrW8+vjPf/XLstXAXOCh2qdeUwGF9t/Z7xz+n5wIe8MSfN76458N7ykO2uIm0kM5eG0RCvnWEYRz6DbM6yuLc/58UYipBG9Pvr30v6m+/QMVq49fI1+B71N8ADj4kd8trT7mSmW+BUFV2msPUPgawiKgUIeY7VVadHMBR9Xq47fom1LKcgh83jd9q3wL0kQoHMgvF/9C+ZR88CX+do8gnE+HiamvfZn8/AffL29DGluZ/EjB2oj83+oLTwwMfYVuaaFJzlLoUOhgmPpNtCDucIPrXHV4Qt5ByyKHkanXlqHwI2/wIWabI+jDvg5tPPpQsfkd6EyEuiLkudJ0UQzfUqu9TbXAEefk/cC2rYkLT1IgTMEwsx4msrAyAKqYD+DnQ8j5VcoGhrlhZPR7VRDo4DdSYRNqVSkuhEMp0OXCQp9ZpRQKqQwMkzBVNg8wDaP/dMrBXqKr6JeL/RZlQBj86F9Saf+HvJdDH0lw3F/vKP8YAKJurrZlpTErncUp2VlpC617Bxt9OQYH7Q7bstYCGCLtBgBvoweQa8zoIpR9AGUTedq1KenX5wB3l2Rh8h6ZGbtXGoCwbXBVtzYhvaUpmZs8Jyvdukxfuldq0xekOTepw857620dpu4iTR8gyWtYaS4CEidQFlcST8hdz/qf1Pq3u7kiy/DzDSrNxWlAZU3Gz98FIGyhP9iWQasudc4h7DR1C52JC2eljuvYXO3ISq8hZ3ZW6rIF+DvCSa9s90G6y+rfGizhi5N6m6DgZTkGPBICD1ZbcoAw/iBccbwPKiYZH2105PJmByBIK6MBGEEtfUKJ8EY/KxjSoRJquqAU/G6nMhSmMkDMWxBPkFb4BBQTt1b0AIpU5dBxVRiklsAMvOiOfodCh0ZXTB+kZmqrrGXl41mpvWKPVNU5ILMuxkaUgl1RJRB0AQ7KoJdXCoWuqnSUxRFKAByJ0jRpeBWUGAja/nRHgAEVGrkCH9ynlS844LwyA48EMNCRKTSMgMI3AQLNUmFHs1IUAQ46iKqCQkuzbaqCQuRLN4t2vbmiLHZsCoUvfJv8efG1Zp+/KX/1vp+U7/lXBEH8zv/qO+RHfupt8l//5OnSnMC/eleAeP29zdrnOgTsmVbkZR8qrJ5FR//Hv/ZS+Y4vXwHQrchXvOgl8qq3vEc++tfFH/BT8n89f0X2cLOLGiRKw4eZu7RK+Mn/XABJ178pp8Xn6T95RH76336Vwd4Lvkle8bZHy3so0qr4csKgvVx/7xRQ6O9YVb2sYp/Cm38pH3zLK+QlXxOA8LnfIN/zg2+Q//R79j5mfm594hfkebqaOejNf1Seq3nrU/LYr75CXvy1ZuV73ou+W978a++Xx5K9Jm998hH5FkDi1sYvyScKdYCv1Hvzd9FayFXIXy0v+eE3ya9/+E/l6cKJ0jmFBoIvlw8++bQ8+cmPy4ff81759Tf9H/JD3/dN8vwAic//5peVLYWEQrQfL2d3u7yR9a0/e0R+7OsZ96Xybd/37+Wtj3xAPvKhX5ZvV1AsKkzJSMJ8/mAUp33Y1A8qTavpAYaUucO0DrZxiA9b1w630Y8R0vIQqFAYwizcFKEwhpWUgmDqVig0ORRmQEihf80DIVWAvYLY76UAmMUlwJhCYaYM/PKKUJhAXlCldTCDwiANS/yVivmqgZD9UjUUZkpgMBPCuV0NF5MQ/giPh5t92VvrKBTursMNSFwHG/XqswC5tg73DhrTcog8fKDdHDR1+He9uwRom5C1zgJAcAJplwFy87LAN5X0lqVTm5bZi+dlaWZKpi7co+DYq00a7C1Pyfz0OYDeWdlAOYP6oixPX5TVDtyNeVnDOVdaizJz8axMjd0FPVtaKI+LVhZnLsr4hWdrP8fVzq3FecDhlKz1Wvr+4+lL52St38R3aCIO8bV5GXTqUpsdl3N3fYF0mjV98DnD4dHL2z38AB052GzL8U4fPw7Bh1AzBFxt4w8g8BAoOFeQQ8FrAbi21ZrGisCKyXy0HB4TDpE+VjRWXFRirbQOaVSoyGnlhqogz+IC6BXiThTTZ+eLEOjhMT4BxJxsCJrurKGkDQDfPwVGUx4Kc9DHsAwE0zhWzKAQVgI3wl/qdmX+PPxFOPT4gnDOorgHk+7sjkZxKmk+HqNSYEul8dx42N1ZWFQ5X7BSwZ3BIGAun4YwmAfCaBUMIqRk7uQIHRJe9FiGQG5LUtyaJIMJB8NgJTJrUvXw8RvxHXTIKgPCvHSoNhMBcXM0FLpOsBTqq+UAfAp+KKtsKXxELX/H+M35u76puC3NHXz+6l0EwAh/BLxKvaZoAbyzz62/B2C9GRC4gSfzUQIgqeAuWrQIhbt4slcl6XTVcBWcneLDN4t8uQ4bG/jtblUMHydQSBDMQeHGw/L6Z7RcHeW+itDoYPgt8r7CsO7pPrfk8TcTCr+k/HvdyYdbzjz5PvlhAt1Ly9bU234+/QH5NsBXtvCq6s1AlR++nYfpqRQqy2HZiuSgmCYRzp2DQ+bj9aBtZ/MdIbZjvsf7OsDQrIURAin60zCDPg4VJ1JItKHj0pxCVwKIKRyeBIXV8j4wFfvn0K/BH4FwBBQC2tK+b5Qi9CXuLCwo5/d+NHWPkucpDAsnKkEghXtc7F/L8v6PK4Z3AYJHuF9x82r2k+sAuX5jAeFtANaiDDuLgLRl2QcMrnXmAG4zCpJ78O/j3jIEtE2ff7bC3gYXl9QXpAFgawC+1gBhW/2WNBcmZZobT0+dR/ycbAMo2wsTUp+9AFg8Jz3AYQegSCgkBG6tdKW7vCh93QOxJlMAvKlL90gd0NlengMs1nUl83nAXWN+Gt9jA/4FOX/vs3VfQm6wzRXGywvTAMGGLCOMm133OzVZH7RkdnxMJsYu4J60JmeuAhpYGR68hop2lSbprTAkHFYeA3IU9rb7crDaABW34Od8O64uBvgAbAwA0UgAjQRC5lWLYYAkVqj49AJ5xQsVsVSBvZKnld6l6YOqhpwrhppdzGNzEoPQIE7c/iYnPy/c+D4uazxsDOU5iwqIAEA7osKiQlYpA8WcGB6E3zlVBoaUwl1yVHcEw6h8Gi0rlO9zAzM3G4i6HdbycwCr4S2Gl6CvoGKeUeWpFPZS4MvD30nKIDCTDwkD+lwKgHkodItg5s9BoYvpXIBBdB4jLYWAwjc5EEI6Py8HgRauceo3sKuGwpCGaSvmFL47lK9lsfMKKs8pjBs56+/wglfLH97R+2rj58l3JuC3GY/7QRqm7m+Qd37yTl/Flv88+Q4HubJ29F2lJgJfJRQmaYp6yTvu7N3H8vSj8vrncRsa37i6evNqnVOYWQqDtVChEGEb0PNfJR/+2zv8XW7+qfyn738oDC2HbW5ejHPf0RfAV/jYL8pLcC06PPzqirei3MmHc2cBVj/8oTtFQt8s3aDM9WMfPl05ZqlEHlUKhi6PK8aPCMO5c2AIqYUwACHF+YdsY5cPtuXa0Y6+AeU+9jEKbATCYDEEyGXvRA5zB4tzCXN+pIvhEQxzUjC0eYZZ36b9W9o/ur8Y7sr3awaE7Mti3+zvPTYYdCFMjxECVaEvpDsDvpNUAYAEumJYUSn8jYqrgkL2O9bf0R36VbrD0cNpLTzCg+0OII9bzOyt23Y0w/aiwttKc06tfcNWTS2Cu6sdgB7dNd3Megf+jX5DLt7zRbI8ew7+BvLNKux1liaksTAuq8hHi9/sxXukBgBsL83o4pKZsbtl5tK90gFkdhA2P3FOlqbHZXF6DFDXwDXUkbcuvcaczIxf0CHmZYAmh4LXuV8i4i7e82xA4QwAdVU3zJ4EPC7MAEYBouv9ti02wXfgPofTl85LG37G8TV55579Rboy+QzfLEKgIYhwaJOrc22lDbea6QJazGJIINxozwIOu3L9CEABALyy3dNhY4IhK4RZCbs6FM14BSJUEq1gqJhUZtZOoFAtiZUKFbiy0jP8NlBYAYZc2BKhkEcOc98eDKNFkapOo8LvEIExgUQ2lqQCRwV4hKqAsSgHuUwOd3oMsBeUQaL6mcbzhbRpOYkMCAtgSFBEw1KFsBTesrjTqJC3SlWQ90zk4GNzCg0IUyn4+TFTsBBmsAgIxLFaAQYhXbgAKCzOuUuHj3NAWHK7FdDCKqHQy4COKlcfOwj69zWVFq3o/Dp+LwIu5+sN5fDr3yi/fzs44evvPpkfBq6EwgIYZnr+K29/jpt/KR/979V48uQ7fJjYQJBWQ3cXVW0prE7r+q5f+IOKV9mVPzc/+R55ZQBCg8IAeJVb0hgQpiqD4ffJr4/4zvnP5+Spj/yi/CDOrSuaKQXDoBf/gjx+Gpa6+YT85k/8bzh/YrUEGL7k1wpvPCl9bslTH/t49W8UoPDrfuRt8uGK1yFWf1De+/+9vCDAVw4MX/Aa+chtvsutTz8m//HfRpDzvCnQZeWVILDoj2GZRTEph/KhZt0bUeHQ2qotPtmU6+ijbJPrYCkEwEXLX2F+4SkWosS8ZTh0MFQ4TADxROX6sbIcCjMgTKVA6FAYww0moyytKQeCrsp+8DRi3qJivAIhhf7FtJG4o1IQVIU87Jc8jFZAQuE+oJBHshGHbzs1ABggkPsV9gF7tCISHHeGgEi05T08XBIOl6YvAdbGAHsNpF2WNheHLFyU5bnzAL4pnYvYW56T5ZkJHVZe7Szo/oWT5++S7vIsyhkA7iZlFlBHi+Jqb0kGANHNQUvnX3eW5uTivV8ss+OEvovSR9xKZ1nu/sL/WfrNOu69Q+Sp4/qWZAqwOX3xrObfwHWvtBdkeX5CF6jwrStciby50sG575Vzdz9bznALGa4epmWPEONwwz0LuYCEK4aPt9qyN1ySg+GybjlzjSuJd3qyv7osB+utAEHoyLfwAwIImfdos2NDzawoqIwcPuYxg8JMDntFJZVV8xfCNJxQl6/0TFcEw3R1c1zhfIJQtkGiu1PZ71OWX1cxHGCYNZbkyaognZeRAWKs6AqLJwkVPJOGJUPXCfzpJFuUZ/K0aZgpaygFOQiW5LCY+YPSNIkIfIwvQqAK8JKHunTD7KqwYpzHp/6oIhCqAHY21zAvgmDenwfHPBSamxPQj0ZCIVfoWgdSlA71BmX+gxMshQqFKK8SCg0CCbrp96yGQsAgvptDoekr5RVv+5A8+bc35VYyx+zW3wHUHnmVzf/7tvfkFmaUoFCFG2oifX9o5n+hvPrtfyBPhvlx+vn85+SzT/2R/N8/+z3yFbgJH2w+KK96z1/KZ/0abt0EjLxHXvV1AEucpwSbUHGOYdWcwj1AlMuBTv0hj4Y973vlrR+0+Xvpb2DX8H5568u/Mlj8qlS9JU0GhBk8RtlKZAO8r33pz8gH//tn8lu34Le5xXcRf/Bn5Ee/1tKV5FCo/hfK//mW35LHn8r/h7z+pz/5qPzmz36fPI/n9mtSGaRyaPvLf+Bn5bf/JL99jG5c/ZFH5JU6p29d9r77l+QjPsHy87fks3/7hHz4V75f4S4DrK9/ubz1PY/Jn30a11GASE4FeOpjH5C3/mDZQpgDsRd8v7z1tz8hT+cvBt/jMXnHG14kXx7y5PPZ9k5xD1FTdo4AfiepCgr1e+PoYBgBke0N9y5CCKDp2tG2XD/i9m3W5/lCFF1EkoEhYTC/XU1UAoXBehjBkMrD4SgV+z2V9pPoxyD2n9ZnpX0r3VvoryIgaj+dgWIChVTo21I5LDoc3h4KGVYM97AgzZe4K8or92kRCtUf3Jk/hPGofZz2ZREYaTHcW++q6Od8w/Xuos79W2nO69Yza/BzIcj+RlfhcVsXpaAdrXbUQkgNm3MAyGmAIucRjgEOxxUKd4Y9ac5NyczFu6Q2cwHQxkUoF2V+/F7A3KKsomyuOJ4eu1cG3Oy638R5a3K8vYpzNqRdm5bF6Ysyifg2wW7QlAt3fwHKn5adFcAj7pNcKNOYo7Xxki5qoYVzFSDbayzIwtS4tPhO5Ja9qm9h8pKMn7tLzlzd6SrocRuZBwAw3Drm+sGKXN5uy8HaEkCvYcf1hlzb7iEtt5vBD7fdkdXmhBxvtuUhnS9IKOQq5prsAx4JhRxiZoUqAmEEv5PklZT54Xel4UyXxiVSSEQjSMFQ3RpnjYKyxSrRb8qnoex8ReBLlV5XGh5Bu6hsMUsBFtNh6AiKqawRVMdxuNoUN9z29KmYtirclDWaIG0oPLo7yGEvdY+SvZM2D4GnBUJ/a4rHx7eo5KXxqfsZKINEHjN/AoXbeXEoWa2KmhY3E3wfly2ACVu2AOayFb37Pu8viLDH8LAwRBeAqN+O7HBiORR/r6gUAHPC9ZrCd0p0yHmA2VzAvDJIdNg7rQBWBDQHwMo0z1i8HhfOkwtLADHEZf6gFAgjCHJhiqsqDAJA7ULqxrnyEAiIVKXuvD8OLVcrB3XPSOmbUtKyOaRuyuAxKD0/oTD3nfQ72ps99PV1lIMewUjhqKg8QI1WmrZYhitNP1o5iKuIr1psMkppWamyeE1TfW0GhwBDtkm0U7ZrzjfktjX2/mRa8lIwpAz6MhDM3plsSqEwG36ukA43jxD3G34oFfo/SvvCrI8LfWau7zVZf219thtwVAqHEfxyABlUsjQC3lwlqHM59FWA323zUuibouiP8w4t3t97bO6ijgB1FN0+qsataPjaOh75mjuuSOYCEu4xOATEERL12Kuh7DXZWW3KsD2vRhluN9NfngHA1ZAGgDc7odZBghnhbne1L6stblEzI5MX7tYh5R1uZzM1JtMX7tKhZ55zYeKCwiGhk/lXAIi0AHIeow5DXzorndqMDl3Pj5+VuUt3A0Zn8D9syfZKG2DYkiEXlOh7kMfUqsh7c2N+SoFypVuTHiCXQ9F8l/MZvo6OewrSWsihYb6d5GijgWNDLm825TKg8GhjGVBYl8PVZbkGiLz/CCQ8ACk3xvVtJboH4BEgYw83GBDu3kpNLYy0HhJsYiVjxQIQnVAR8wqQlaWnP40P8vgRsgbgfpbn4JcqCcsBpMvyxfwBFt2Pa8vk8QH+Rlkdc5AY4JDH4hB0CoyprPIXgbDK7WmDNG8Ip9ul8WggoQGljc0bl79QnHJALPorARE3TLcQZm5Aiyl1U4XX6AXIe0ZKyzlBZTiMQMpjHrDyMlgM1kWmy8ogELrYWVAJ7Dn4Bb91KMHN34cgqDAYykjLUxj085gyEHQlAFgW4O+fAwoDoBXDSuVruqh8vOXj9jSW1srIKw2z9BkMVvgpBT5AUA4Ki/6cCIQAOxfCMvdJYQUpmBXDMtFaWPQXw26jAIfFsJx/hNJryoMhrYbhlW+AQgXBoghwRb+CkrmLFrVUaboUsE6l9JzZeamKtKrbxQcRAoNS62O0LgKKE38+j52DWxj5nod8CLwKMOSQsk6dovFEh3oJiDsGdQp/ZSg0MDQ4TMGwcg5iIu4n7CIUZtJh5mAtDEr7N+0b0z6V15uJ/TaVhAXwy0AwS5Moic+sjJT3K6dQNmRdLCOUkwdP78uYd9P6MJeXqW7EuUI8z0EL3/HOirp9dI15dMuZtY5wz0JOreOOLKvcrBriVjIrzRm1GtqG1kMdMiYgcgPrFmCOG1YPGrQYLspam1v8NaS1MCGrnIsIWOM+hLXpMUDauOytcSPsRVmcPCdNpCEUthZoZRyTDcDl8uxFWZq5KN2lGYAhYXWgextOXLhHh4+5MvriXf+L9HG+Y9xHaQVk37M1bEt9cUrnF/ZwHUfbq7imRZkFcG4MW9JYmFSL5NawK2e0sgVTs1oK+eaR3a5aAq9steUK4PBovSYHqwsAvlmEtxDflkHtPOBvQR46BlETAJGXby3Z7s7JwXBJy+F7lXUTa/yBrJQGOGtWAdlAvDKmQoWLIjgRuhJ3Lh4q5r+trLy0QTwj8ffKNSyAXpC9vq8cPko5OCyJUG2wqFZFVHo/VoNhlTxdKoRnjSgR47wBaRgbTQQ/yzt65VdqojcgNJN8XoRCHAEuBLL0lXoKaYij0jw50DutvLxTivDnx9spWhEdwIKCvwyFBGIHw2qlaaMi8GmZ+t0Qnp0jxpv82gh+qYY5KXzx6O6go8RtUJiXghoAy0Esy+tx7v9HK5Ydz+vXEc9flA9Xq5UycVNxeDkMMWdAlJ9XqPMUg2IY0wc/IC+uXK6Sl1ssH+4SRCYglimJL8X988qtowaFqwBCylbXu/YqxFdr2ebtgKMASOZPYBCgpErDUoU4wlbqT5UBHM+T8//jlC+7rMxK6HBYKfwW/p2RzuYdcsTAHu7Yxq8QQtAfEqw4D9BALwCgg2GQw2IOAjMVoTAOG5tl0I55KCyK1+D9FPrGYt8KRShMgNCl36MoxqXu1A8p0BVgzoW+pgR6mn6U0jTmZn9lfsA4Hq4j/Fm/ZX4/uiwfxfn3lhb3WACil0dI3FtryRHBD+Fr7XkA4aTuLTgEFHL/wm5tCmn4zmTbVWStvQx4m5XdVc4/nEY6ex0eF6xwZfEKoHKAsBZgjcPO3IamPjsGAG3oRtdzF8/ryuM24msAv34DcIj4JcLm4rS+8YRzBPmWE25AvcYtcVDO2F3PAiDWZH3AV+TNyZXDbb2XrwNWW4BJDiNvIW2rNgsoHEOerloKOXexNjNJKLTKx8rJuQwEwwcAcw8cDtU6uA/wOwQQ7q/MAfhm5MZeR443QbvtCblvtwdIbMtlAOSDlzcAh11Zb07Ibm9OrsN93wFXIHNYelMeQiW8Drf61ZzOibEjwJBCZSpCIStVsdKW8p1SeZhL/RYWrYHFuFFi2mAVLOUNflx/3lJIuSUxKsJgAoUBDFNLolsRCW8OiDxmT0wlOEx1giWxJD415YehSzDoyqAQDwsAmBTsylqtCKtWEfhuF68CJJ1eBMKoMgiiPQSgMhWhC0AWFGGN8JaoBHxBiCP8KPhlYaEMfA9z8xqCvxgWdDsQTOVAqO4AXwRCl4cVFeMSIMxptSLsTgXA0/JpLTTY49GgMA+BZY2GwihaAQmGefDLtqtRJeGcPO4gqO7g17ggd2ueBOoU7Ar+UXI4qwobIX2LCn4X9eNoEBfC9FiQ5uOR6Zi+KAfBGKbve060l/On2zGZHA5TmMtUAsMT0qfpdn2fQPMT0HLhSVwaZhtQuz+J87SZGBYVh559+BnXh/wOiS6DQbgppMn8IR/9jOM5fO4hH+quAVgITFyMYkPJ7If5WrwIhNWgmACiw2AOCIOS8AiFNP64DAp5rFqkkvWVSV8bIS8I4KVSv4NfPk/MG+JzMGfAVbIkhrCqcFeMy5dlELelcgik5U+tfsHPfioCosmtkQRBWvt4zbQccls3xrE/pZXwcAPQh3sMF9QOG7QUArD6C8I3w9Um75XG7EXZX+8C7JqAQ7SP9Z7uS7iCtP1lQByHagFmfAdyrz4DMJuU7vK8QWRnUepzfJ3dGECQr7+r6dtLaHFcnuEq4wkA4aQuEhm0FnTuIPPPTnDPwnNq5dte6+rr7Wj5a9VmAI0t3Odt3jvvrXzXcm1qLGx6fUEWpi4BCjsKkATJmfExOfPwfYf2GjtUjC8hFAJsHgSAPAwgOVyryWp9TNYbF2W3PytHq0tyfYeri5d0iPjGTkcXm3DuIK1j+4gfLl2Q/cG83Mf3HO/7O5ABmQCYo822WhOziodKwqObslNYq6qUERATpWkTeTmpinHltLweu6ayOw2rUgS6XHjwG+ClsBfSozJbvgB+GhbgL/gJf3rUYXrG0R2PhDa3HKaK0GdQZ8cIg3HOIf0OdeY3WRgXq3D1FY9WjoUxjcJfUQp7q3o0EdwYFo5IkwGd5jGItNXOBXm6kNbdVRCYS5uoGvyYJ/EHN+HPNwB3fyYAFI8EKXeb8nBWpWg9zIsdBAFuDyDCI4HQLYE88jqLeUxIy/R67qhTQ2EJxP65RVi8HTBGECyKsGcqQmCVDP7cX4ZCU2oR5O8fgW+UAvjlQPCEuEwcquUQchTD/ehp8gK8ZVbE0XCoVr3EncFcEq5xCeQR+vgGmFR8G0zR7ek1PAeCqYpQ6O5gKQswlLoJgH50t271on4HswTYErBLt4UxVYVVKwNCdaf+Ijym8rReBpReG67ZrJaJCIKIczf3OKSbaQ0KN+SqWrHY/7i10MBQh44JfzcM/vTdydR94ahwGKAwgGEGgAkIpooQmFfW79Gd+iHtG0MfG6GvCIB3qABzRdjLwnNlB3eIS9PfTgRVhT2An8Ie5H2T92kUAdKPTMt8BEEOA9vbzMgs5mY/doMgib5KN6sGHG716tKeG5c9QNUB4I/WQGqtXQN0jcnmoIbfckfn/i1OnQXgTciwsyD9BqCwOaNhXHTCN45w02taDdd7DcDfjEycO6t7HnYBjlNj9+gbUbg1zcL0RZkH1NXmLspaH+dfmtJypy/cq28o4Tz2C/d8oVx49hfpXoS8l/D+xn6FU2i4AplvQJmbuIDzTEpneRYw2ZJVzmdEOlobz2hFQ8WipY+TUB+4zKFJQN4xOg9AYXv2LhnUzsnx2rLs9RflCucZbvCdfiDQ9QUFxIevgcwPhrLVmQUQLsjBCrTKeYVdhA8AhQCInT5A0lYvZ1AEWHITtlnNqitlTgSsnBh2eqUVP1O4BtuuJvHDHU3sCehVKsJfFkZ3+K4OfQ54EfzMfR/jPB5A58PEXLHMbYLUDYijmJ6LfRQEFei4rRCBjouE7F3OqgIYprLVydxjMsKbAiEbDwEw+HnM9joM4RaGJyoFRWtsBn0sk8ckbSjD3Bw2RjzTh3wnydIxfVQVDEbx3BAadmlIWpVAYJClNVmYwWBUBRwGaTzOZ6KFz4DNrycHcEEEstTP+F3dCwsNN0tveTIgpPUxE/IkGgWA1dBVFIArU1XYSRqVP0iBrBAGVYVpfqTnROoIgSYPz0Nh6o+qAj8Xb4x+TEEwVR4A+QYDdwPaknAV8quyMLrdH9waH8W5hVn4iUrgUIHQlYCeQmNIkyidE5mFp/kgHyLeT44OhCkUxje+EP5M6V6dDoQGhanQcQYZ8JkIRNlrAwNkUTYHz+EuAppL30G8526kVdnbgSh/H3haZrXSNFZeDEv9t5OXUQTEogwEHQh1KBkiFHILGwND9hnsYwBuCnGEvCgFRfTRX0IBDFUEw5y1sEooKwXEFAZDnxb9BSDUvjYBMygPXql1DjAV0pxOKFPBrSA9VxEKY9r8+UOenCw9LYR0m3WPoIf0OF6mBVD7q1U9pnDIufA0Hqj1EDra6uv8QfZ/hMLL2wP0X+iTmIZzRAmZuOfzlXat2XFZ7yzjHFuaj0PEg+UFXUBSn7kk69067uMAxsY0AHBS73V8G0odMMn3GHORyPi9d8E/Jb065xaivF5Hxs/eJVsrHbS9vsxcvFf3JlwGxM1wIQlgcvzCXdKszSg0rnZrsoRz6VxB9Bt8Q8nE+Xtka7WHuKZaENlHbK92dS9DQufc5FjYlmZc90XcWGnbPGT0RWeu7Ngw78OAQVoIOQ/hvqMVubHfkuP1mnTn75bdwbQcrS7KdnsKULgM1eUhQOP+cF6ubjYAlLhJrC/rXMIrAMZDpD2C/wqHlrdaOpR8rO9HXpT7dfiYlcnef0zo4pFL2bVxaKVkQ7mNFLxC+sQdw1yW1mXAlk8bIXBEPMNwjTz6SuV0xbK58V2CtVCHhxmm7gCEhD2IC3I411LdnF/JcIU+bvJNkFvF/2HwRzeBUKEPokWWYn7dPNyFSs40fOe0gSGBzhRBEH6k45xOTcN4/BcOiA6EmgcyiKMIVmhIhCA0rAiNeaB065oCIY/IY2VYY6LYALUshrMxsmzGj1AOCpEnAh/P90yUB0Mv66Ty/Jzqh9uVs0biOm1ldQTCVBnkARzTIV6FQgCcbpAKqImg6HGnENKlUFiCrZyK8YmY11UV/0+lEhQS+vJyIIxQWABBwF2mEJYHwAh6WThga5+vrcrCo7skgJ25I0AS9jRc40JYTgEUCYU4ZvEOgacGQioBupHhz1AAwEwBLB0SFRAdAnHMwjM4LCqCYbaZO+p6tv8l3epPpGAYoUqBkJCXhGXwVYA/U0gf/CkQ5tNFHQEqfXN4l23rFPwn5FXhWoqK13oaEYhxDkjnF0I+v5jzrq8SRmjRAszYSmWDNcKcAp4CYLAc5sS4RAUo5LHKgugwaEL/pn1fFPvXHMiVAAxKw+HOjDYq+tnf8vsEJfEZ8FUpPUeiIhSaHEyTdDp8bPEZFEKXacTg3so4su+iFdD6FPaNG+hvrG/i/8B+ikPAfL0d+zRaDrV/Q1ruRcl5ofzfCIjbw44sTJ7X4WCWuTNsytLUBfDQimz2Wvr+4n5jEoAHgOSQMDe5XutJd4krmGs6BDw3zm1qphUKJ87drfsU9puz6j/C9baWZqU2M65zAAl8tBLOAuroXwJYtgF1izNjOozMOYa8by5Mj2n7HrSWZaW9rPcjDhOzvfOtKFMXz8nYvc+W+amLssz3LyOcb00ZtGtyZrM3q1vOXAXM3QC8fSmeRGjdu74LKNxAgcsXZac7L/3587LTmZHL63UA3rI8fGVD9voLCoLXdjpIWwcstuVwWJOr201dqXwA9x4th8NFdR8h70OX1xSgCEqskKyYKeip5YxHl0JVXg5jmZC3MkzlYBaEOKqUPidrHL6nk0Odgl/Y/NoWk0T3/cd89R/ShPPZnEHkC2EGgwaCBDy9puAnBGp4gELdFgiAp3MwGYb4CIUrCpEKhZoGFXunr2np103DmT6zErJsuglpll6PGTwa3EV4NAskjz5EzDfXcAUWn5hYLt91zc3NzTppQEkAZINj4yM8GixauB7RiDivQyEKDSwbeta4Ecryo+xTqgh1JsAZxXgXwlMoVLEMHNO8WZlJXgfBnBCWpknFGwjhzYaKDd6sfFr+hrpKjHti2TX6fEIDvjtR0WKYh68YfjqhLJY5Srlzuf82KlxPdl0FaXgChFXKQWKiFA5PpwQcKdw8HQgVJKkQ5zBY9OcWsGRhHLYxEMvCCsoD3+jwarFsc6dl5stIYDDIttcph1NmYUzgkMcR2sN/4GB4sAXYo/UQ0Kcr8VF/D1FH7BgshAEIHY483ORhFcogMFWEu1EAZ/GEwSiDwAhmDoYZHJ4gv57Mz+tIrtPLpdJwEx8Gw3nhzuYNB9kCFMIIAcbgiPCkYKhAl8Ae4K8IhqYEFLP0BMNEjNP4FBJTQIygGGGO/RgVgW4k3KmVDnDmeUI/SsjNFpYi3UkaBaEOejkRpAmBQTafkDBIYKOblj8aYjiUjHq22ZXjrb72J2ohxH2Z91zCHe/hOp9QYQ/gh/s53228u9bFPQl1fYNguKpAaCNCcCvUb+p2M9zUmm822eovS2N2TOqAt308BG4OuNhkRucNLnIu38KlsHhkFiC5AECblyWkPX/3FyjQ8XV1kxe+GPDIdyVflPbytAw7SwqLtOrRwjd9aUy6jUXhK0q55+DkxXvkwj3PknN3faEODz90/QAQeV4tjixvCBDlXENC4vqAi0oWZa3fBkSOy8SFc7Jcm5N91EtaN3v1OTlzeaMpuwDD3f4kwG0WYNeSKxstefAA4LDdke3enKw1J6S/cI8Ml87JPkDwYcLO4UAGC+fkPoDkgweAkt22XOGr8Vbrcn2nJQcrAMHBvFzjPocrC7KFc1zf7wGGCIWb8jCfgq7uaqVhBTJADFDmTy+qEDZKDmGJPwXIO5c3ApZl5SmoQYzXYWI/JuI+j/dpmhQMKffzSAgkpBEKCZpmNWRetRAG/w2A2lWA3o1DTnjl/ECCoQEhj9wSyPy2cOcaQJBD9BTncGq45kGFh9tBVF9JqEBoUGgAijjAqVskGX51h+ZyA0izHALO2GAQTpDlhuUUNydnGFdlERrp5wbmhMcIioROs0KqtRBHwqP6UbZbI4sQOEopAN5WbLgoM6+KNJqO4rUR1oI/C6c8b1pWXjkQTPy8gajVkOURjCEbSrd8hEKKr1Oi5UwhD7DlMHtaSIwARlA7SSENISyEKZwi3BXLqlbV+e06w7WmaRN3vAbK/HbuNBxKILGonHWRv5tCYlGExKqwk+XA54oWybQMc2fpmM8FP+Ewv0eihZ9WOcBM/Tk5xFXFuQiBQQQ5B7os72gVt/OhbOU3QTDvV/mwMv4737PTYMjAT4eMIYckh0ePzyvC1EgBphzMIpAB2AiEAQrL0OfQZmXEfCYDxbI0nuk1zwnyNBUiDEa/fW/mYfk6nKyAwTluZuEi8BiAsW+k1TCFPSj1l8AwAqJCYhYf/AkouvUwKg+HbiApA10Z3KLQHzIeMrhMFpQq+FXLy1Z/oUwHwaJfFeBQfzfkJfDp4kvEMYxif7O32tK+ikPCDoW8N/HNJ/bgjr6PVkPo/iu7Gsf5dtvIt9Vv6obTvq0a7wkc9bjKPWVRl7mX4SbScJ/A7tK0LE5cktYC9y+s63Ax9//jwg4O8zKsuTgh9Xmu/AUIIt+5u56lW8tcP9q2YWRA3fTYOZkcu0cGbW40fRHpufp4UtPyHcasl7Ts9VH2HM43OXZe1gboi/E9mnMTstZr4/rb0m/NyQoAdxUgOOg2dQsa7ofbbdTkni/+QqkBULn1VHd5QdY7DTnz4PGKPAzIOBggY+1e2epMAgqXAIR12erOSG/xnAwb52SzBfKs3yOXNxblIYDKtoLktNzgPobri3Jtpy47nSnZG8wALBflcBX0ifjd7pTsoJzrez1U5O3sSeU5EC1xsdJTW3iCcbcpraA5pWCYASFhrgh5LrP2ZaJfFeIR5vP9tFKjUnlahyjPlw37BhHwaF29QSue+iMUckjZw5iXFj2DQ4M8QjIhUAER4RqH8CtbHNa3tA6O1/f6ONJSCNCDn/n0DTMAwd1BTQ7X6noNCo8BBGmF5CIfprX0ADJAJGGScMp0Cn9Mi3T8nvurDUBKL0DhUOeaMs/esI4jrZH2exAwuWH5EZ7AdAgbYYRCSkEyDCVHKDSLpJvwzcrIRmlQ6ABWBMEMGkMZeaVxxXgPMzmEmXiuqjAIUJOBYWW6ao2Cwsu4tiu4CdlNZ133vNrBjYYQyHTHgIm9dYa1NYxQlVkRcWOqUgSoKtg6pRy04M6fy9N42WXlYdDlUOjKx1tenKcQnj9nouT60rCipTEFQwVGVTnNaIB0GRim4JcNd6s7qKKsyjDm1fwxvnxdJystz5SAmKoYT9l3SIGuSrlyeC49py0GYlhxqL/4/5vVmP8z4YaCm8r8AawUhAhWdJvfLGRmJTPreJRDVJYfKgGVxuOYCel8z8+CsnJwriOK5WWy/Ha9o+XnG6X89Z1GocxE3K9Vt+sKD43cE9bhhkDF3Tq8P+T7jw3idnNyUFQovFGERFO0GKZKwDD0x7HvrZh3mMjCGG/K4hwME+DLoK+gynh87wwCUY6vKi6L8AfxiL6bwOfQZ+BooEhLITef5t5/ZiVEXUc74G/OjcZ5f/F7FwGd9xouAOG9mnsMEgqP2RaQh9NIDvDQxnvX1X0bRuYbRQiH3CuQG0HPjZ8DyF3S+YA7gFEuCJk4fxcA7wLCET9xTl9Ft7nSlVaNewbeK4PWPK53X9pLk1JfuCRj9z4LADkL9xTyTUh7eQ7wd5dMX7ogW6tD6dQXZa3bAOAtyczERTnAd+K8wMl775YO0nLEYOriWVmcnZBtPmSiTa9zRTLq2hCAeBaA2arXdAP7Xqsm9ZkJ+f8BBpTNy2ifT6sAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Passed typing&quot;]" />
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NGetText DisplayName="Get Text 'Today'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="3c129d3b-e96d-45b8-a1b3-879a397b7024" TextString="[currentTemp]" Version="V4">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="weather.metoffice.gov.uk/forecast/gfnhqhnts" CVScreenId="130c0a2e-32d4-473e-b410-bb0c2cc4ca57" ContentHash="yeNGDBhlNE-MGCbXIe3tFQ" CvTextArea="681, 476, 21, 16" CvType="AnyWordGroup" DesignTimeRectangle="682, 472, 12, 25" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-label='Maximum daytime temperature: 9 degrees Celsius;' tag='SPAN' type='' class='' /&gt;" Guid="dcd90418-4712-401a-bd9d-2d0b19876563" InformativeScreenshot="0d00bd956c0322d7252debe9c8732759.png" Reference="_QxAbkkw30eehk7Zd16nGA/ceZeOELSAUmCBekc9LrnKw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Strachan (Aberdeenshire) weather - Nearest forecast to AB31 (United Kingdom) - Met Office' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="130c0a2e-32d4-473e-b410-bb0c2cc4ca57" CvTextArea="679, 441, 69, 25" CvTextArgument="Today" CvType="Text" DesignTimeRectangle="682, 438, 64, 29" FuzzySelectorArgument="&lt;webctrl tag='TIME' type='' class='' aaname=' Today ' check:innerText='Today' /&gt;" Guid="cd0339f3-1fe0-4d1e-895f-3e03bb6ddc7a" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Today'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="3c129d3b-e96d-45b8-a1b3-879a397b7024" TextString="[currentWeather]" Version="V4">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="weather.metoffice.gov.uk/forecast/gfnhqhnts" CVScreenId="ec281573-f0aa-4814-99e8-2ae5dff8e562" ContentHash="dlgpV88WZUuJz2oxZ2UPgQ" CvTextArea="939, 408, 36, 13" CvType="AnyWordGroup" DesignTimeRectangle="940, 407, 35, 17" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='dayTab0' tag='SPAN' type='' class='' /&gt;" Guid="e4fe747d-eb47-40c0-b704-6c234b4f24f8" InformativeScreenshot="93351805cafc229602d73f85a86e78b2.png" Reference="_QxAbkkw30eehk7Zd16nGA/kyJFgh_h8U6o5qam_Pae1g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Strachan (Aberdeenshire) weather - Met Office' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="ec281573-f0aa-4814-99e8-2ae5dff8e562" CvTextArea="679, 409, 69, 25" CvTextArgument="Today" CvType="Text" DesignTimeRectangle="682, 406, 64, 29" FuzzySelectorArgument="&lt;webctrl tag='TIME' type='' class='' aaname=' Today ' check:innerText='Today' /&gt;" Guid="d18abfdd-3a67-4386-abf5-655103308725" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The weather in &quot; + userCity + &quot; is &quot; + currentTemp + &quot;° and it is &quot; + currentWeather]" />
+                  <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[CurrentWeather]" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;The weather in &quot; + userCity + &quot; is &quot; + currentTemp + &quot;° and it is &quot; + currentWeather]" />
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Edge" ContentHash="7GwQjaQui0uT1kWA94-tTQ" IconBase64="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" InformativeScreenshot="ff16fdae8a5332e8b7a8d859991d3001.jpg" Reference="DXlHvjOJSUSZANayMpUwVg/2WA8L8WmL02Ux0b42Wu9pw" Selector="&lt;html app='msedge.exe' title='Weather and climate change - Met Office' /&gt;" Url="https://www.metoffice.gov.uk/" Version="V2" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,168" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;An error occurred in getting the weather&quot;]" />
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </TryCatch.Finally>
+      </TryCatch>
+    </Sequence>
+    <Sequence DisplayName="Creating Envelope Sequence" sap:VirtualizedContainerService.HintSize="520,2927" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,1136" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+        <TryCatch.Try>
+          <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,674" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <udia:CreateEnvelopeUsingTemplate ActivityInstanceId="8a88ebc3-f437-4937-a1f3-b4879790ab8c" BindingsVersion="2.1" BusinessEntityName="Curated Create Envelope By Template" ConfiguredBusinessEntity="curatedCreateEnvelopeByTemplate" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" Connector="uipath-docusign-docusign" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Create Envelope Using Template" sap:VirtualizedContainerService.HintSize="382,439" sap2010:WorkflowViewState.IdRef="CreateEnvelopeUsingTemplate_1">
+              <udia:CreateEnvelopeUsingTemplate.BusinessEntity>
+                <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="curatedCreateEnvelopeByTemplate">
+                  <uibi:BusinessEntity.AllFields>
+                    <scg:List x:TypeArguments="uibi:EntityField" Capacity="11">
+                      <uiisi:OperationEntityField x:TypeArguments="udic:CreateCuratedCreateEnvelopeByTemplateRequest" ArgumentDirection="In" ArgumentType="udic:CreateCuratedCreateEnvelopeByTemplateRequest" DataType="CreateCuratedCreateEnvelopeByTemplateRequest" Description="The object body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+                      <x:Reference>__ReferenceID1</x:Reference>
+                      <x:Reference>__ReferenceID2</x:Reference>
+                      <x:Reference>__ReferenceID3</x:Reference>
+                      <x:Reference>__ReferenceID4</x:Reference>
+                      <x:Reference>__ReferenceID5</x:Reference>
+                      <x:Reference>__ReferenceID6</x:Reference>
+                      <x:Reference>__ReferenceID7</x:Reference>
+                      <x:Reference>__ReferenceID8</x:Reference>
+                      <x:Reference>__ReferenceID9</x:Reference>
+                      <x:Reference>__ReferenceID10</x:Reference>
+                    </scg:List>
+                  </uibi:BusinessEntity.AllFields>
+                  <uibi:BusinessEntity.EntityMetadata>
+                    <uibi:EntityMetadata DisplayName="Curated Create Envelope By Template" EligibleOperations="32" IsCustomEntity="False" Name="curatedCreateEnvelopeByTemplate">
+                      <uibi:EntityMetadata.Metadata>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                          <x:String x:Key="Object">curatedCreateEnvelopeByTemplate</x:String>
+                          <x:String x:Key="Client">UiPath.Docusign.IntegrationService.Client.CuratedCreateEnvelopeByTemplateAPIClient</x:String>
+                          <x:String x:Key="Operation">CreateCuratedCreateEnvelopeByTemplate</x:String>
+                          <x:String x:Key="Path">/curatedCreateEnvelopeByTemplate</x:String>
+                        </scg:Dictionary>
+                      </uibi:EntityMetadata.Metadata>
+                    </uibi:EntityMetadata>
+                  </uibi:BusinessEntity.EntityMetadata>
+                  <uibi:BusinessEntity.SelectedFields>
+                    <scg:List x:TypeArguments="uibi:EntityField" Capacity="16">
+                      <x:Reference>__ReferenceID2</x:Reference>
+                      <x:Reference>__ReferenceID3</x:Reference>
+                      <x:Reference>__ReferenceID4</x:Reference>
+                      <x:Reference>__ReferenceID5</x:Reference>
+                      <x:Reference>__ReferenceID6</x:Reference>
+                      <x:Reference>__ReferenceID7</x:Reference>
+                      <x:Reference>__ReferenceID8</x:Reference>
+                      <x:Reference>__ReferenceID9</x:Reference>
+                      <x:Reference>__ReferenceID10</x:Reference>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                    </scg:List>
+                  </uibi:BusinessEntity.SelectedFields>
+                  <uibi:BusinessEntity.TelemetryProperties>
+                    <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                  </uibi:BusinessEntity.TelemetryProperties>
+                </uibi:BusinessEntity>
+              </udia:CreateEnvelopeUsingTemplate.BusinessEntity>
+              <udia:CreateEnvelopeUsingTemplate.CachedLookupValues>
+                <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)">
+                  <scg:List x:TypeArguments="uiisi:LookupValue" x:Key="body_templateId" Capacity="1">
+                    <uiisi:LookupValue StringFormatDisplayColumns="{x:Null}" Id="5223b9f0-65ae-4b3f-9410-4ea9bf353c67">
+                      <uiisi:LookupValue.DisplayColumns>
+                        <scg:List x:TypeArguments="x:String" Capacity="4">
+                          <x:String>Contract Agreement Template</x:String>
+                          <x:String>5223b9f0-65ae-4b3f-9410-4ea9bf353c67</x:String>
+                        </scg:List>
+                      </uiisi:LookupValue.DisplayColumns>
+                    </uiisi:LookupValue>
+                  </scg:List>
+                </scg:Dictionary>
+              </udia:CreateEnvelopeUsingTemplate.CachedLookupValues>
+              <udia:CreateEnvelopeUsingTemplate.DesignConnectionRequest>
+                <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" ConnectionName="hiscott2000@icloud.com" ConnectorKey="uipath-docusign-docusign">
+                  <uiisi:ConnectionParameters.TelemetryInfo>
+                    <uiisi:TelemetryInfo ActivityPack="UiPath.Docusign.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+                  </uiisi:ConnectionParameters.TelemetryInfo>
+                </uiisi:ConnectionParameters>
+              </udia:CreateEnvelopeUsingTemplate.DesignConnectionRequest>
+              <udia:CreateEnvelopeUsingTemplate.SelectedFields>
+                <scg:List x:TypeArguments="uibi:EntityField" Capacity="10">
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the template. If the template is not found in the drop-down, you can first scroll the drop-down till the bottom to get all the available templates and then type the template or retrieve the template ID from &quot;List All Records-&gt;Templates&quot;" DisplayName="Template" FormDataType="ExpressionTextBox" InArgumentValue="5223b9f0-65ae-4b3f-9410-4ea9bf353c67" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.templateId" Order="1" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">5223b9f0-65ae-4b3f-9410-4ea9bf353c67</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <Literal x:TypeArguments="x:String">5223b9f0-65ae-4b3f-9410-4ea9bf353c67</Literal>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Indicates the envelope status. Valid values when creating an envelope are “draft” for creating a draft envelope or “send” for creating and sending the envelope to recipients." DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="Send" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.status" Order="1" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">Send</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.EnumValues>
+                      <scg:List x:TypeArguments="x:String" Capacity="2">
+                        <x:String>Draft</x:String>
+                        <x:String>Send</x:String>
+                      </scg:List>
+                    </uiisi:OperationEntityField.EnumValues>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <Literal x:TypeArguments="x:String">Send</Literal>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The subject line of the email message to be sent to all recipients. Required when “send” is selected as status, while creating the envelope." DisplayName="Email subject" FormDataType="ExpressionTextBox" InArgumentValue="Weather Contract" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.emailSubject" Order="1" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">Weather Contract</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <Literal x:TypeArguments="x:String">Weather Contract</Literal>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The body of the email message that is sent to all envelope recipients" DisplayName="Email body" FormDataType="ExpressionTextBox" InArgumentValue="Please see attached contract" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.emailBlurb" Order="3" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">Please see attached contract</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <Literal x:TypeArguments="x:String">Please see attached contract</Literal>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The full legal name of the recipient. Required when “send” is selected as status while creating the envelope." DisplayName="Recipient legal name" FormDataType="ExpressionTextBox" InArgumentValue="[userName]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.recipientName" Order="1" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">[userName]</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <VisualBasicValue x:TypeArguments="x:String">[userName]</VisualBasicValue>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The email address of the recipient. The system sends notifications about the documents to sign to this address. Required when “send” is selected as status, while creating the envelope." DisplayName="Recipient email" FormDataType="ExpressionTextBox" InArgumentValue="[userEmail]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.recipientEmail" Order="1" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">[userEmail]</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <VisualBasicValue x:TypeArguments="x:String">[userEmail]</VisualBasicValue>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID8" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The user defined role for the recipient. For example, “Applicant 1”, “Applicant 2”, “Signer”, “Agent”, “Editor” etc. Defaulted to  “Signer” " DisplayName="Recipient role" FormDataType="ExpressionTextBox" InArgumentValue="Signer" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.recipientRole" Order="1" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">Signer</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <Literal x:TypeArguments="x:String">Signer</Literal>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID9" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" Description="When true, the recipient can redirect an envelope to a more appropriate recipient" DisplayName="Allow reassign" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.allowReassign" Order="3" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID10" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Envelope ID which is created using template" DisplayName="Envelope ID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.envelopeId" OutArgumentValue="[envelopeIdOut]" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <OutArgument x:TypeArguments="x:String">[envelopeIdOut]</OutArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <VisualBasicReference x:TypeArguments="x:String">[envelopeIdOut]</VisualBasicReference>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="udic:CreateCuratedCreateEnvelopeByTemplateResponse" x:Name="__ReferenceID1" ArgumentDirection="Out" ArgumentType="udic:CreateCuratedCreateEnvelopeByTemplateResponse" DataType="CreateCuratedCreateEnvelopeByTemplateResponse" Description="The Curated Create Envelope By Template object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                  </uiisi:OperationEntityField>
+                </scg:List>
+              </udia:CreateEnvelopeUsingTemplate.SelectedFields>
+              <udia:CreateEnvelopeUsingTemplate.TelemetryProperties>
+                <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+              </udia:CreateEnvelopeUsingTemplate.TelemetryProperties>
+            </udia:CreateEnvelopeUsingTemplate>
+            <udia:SendEnvelope ActivityInstanceId="64311544-1b84-4429-855f-31a998f1cb46" BindingsVersion="2.1" BusinessEntityName="Curated Send Envelope" ConfiguredBusinessEntity="curatedSendEnvelope" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" Connector="uipath-docusign-docusign" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Send Envelope" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="SendEnvelope_4">
+              <udia:SendEnvelope.BusinessEntity>
+                <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID11}" Name="curatedSendEnvelope">
+                  <uibi:BusinessEntity.AllFields>
+                    <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+                      <x:Reference>__ReferenceID12</x:Reference>
+                      <x:Reference>__ReferenceID13</x:Reference>
+                    </scg:List>
+                  </uibi:BusinessEntity.AllFields>
+                  <uibi:BusinessEntity.EntityMetadata>
+                    <uibi:EntityMetadata DisplayName="Curated Send Envelope" EligibleOperations="32" IsCustomEntity="False" Name="curatedSendEnvelope">
+                      <uibi:EntityMetadata.Metadata>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID11">
+                          <x:String x:Key="Object">curatedSendEnvelope</x:String>
+                          <x:String x:Key="Client">UiPath.Docusign.IntegrationService.Client.CuratedSendEnvelopeAPIClient</x:String>
+                          <x:String x:Key="Operation">ReplaceCuratedSendEnvelope</x:String>
+                          <x:String x:Key="Path">/curatedSendEnvelope</x:String>
+                        </scg:Dictionary>
+                      </uibi:EntityMetadata.Metadata>
+                    </uibi:EntityMetadata>
+                  </uibi:BusinessEntity.EntityMetadata>
+                  <uibi:BusinessEntity.SelectedFields>
+                    <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+                      <x:Reference>__ReferenceID12</x:Reference>
+                      <x:Reference>__ReferenceID13</x:Reference>
+                    </scg:List>
+                  </uibi:BusinessEntity.SelectedFields>
+                  <uibi:BusinessEntity.TelemetryProperties>
+                    <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                  </uibi:BusinessEntity.TelemetryProperties>
+                </uibi:BusinessEntity>
+              </udia:SendEnvelope.BusinessEntity>
+              <udia:SendEnvelope.CachedLookupValues>
+                <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)">
+                  <scg:List x:TypeArguments="uiisi:LookupValue" x:Key="envelopeId" Capacity="0" />
+                </scg:Dictionary>
+              </udia:SendEnvelope.CachedLookupValues>
+              <udia:SendEnvelope.DesignConnectionRequest>
+                <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" ConnectionName="hiscott2000@icloud.com" ConnectorKey="uipath-docusign-docusign">
+                  <uiisi:ConnectionParameters.TelemetryInfo>
+                    <uiisi:TelemetryInfo ActivityPack="UiPath.Docusign.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+                  </uiisi:ConnectionParameters.TelemetryInfo>
+                </uiisi:ConnectionParameters>
+              </udia:SendEnvelope.DesignConnectionRequest>
+              <udia:SendEnvelope.SelectedFields>
+                <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+                  <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the envelope. If the envelope is not found in the drop-down, you can first scroll the drop-down till the bottom to get all the available envelopes and then type the envelope or retrieve the envelope ID from the DocuSign application -&gt; &quot;Manage&quot; tab -&gt; Goto “Draft” under “Envelopes” -&gt; Click on the respective envelope and retrieve the envelope ID from URL. For example, if the URL is “https://appdemo.docusign.com/documents/details/3ae67e54-f761-4a5b-a23e-b5e4835492cc”, the envelope ID is “3ae67e54-f761-4a5b-a23e-b5e4835492cc”" DisplayName="Envelope" FormDataType="ExpressionTextBox" InArgumentValue="envelopeIdOut" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="envelopeId" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">envelopeIdOut</InArgument>
+                    </uiisi:OperationEntityField.ArgumentValue>
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                    <uiisi:OperationEntityField.Value>
+                      <Literal x:TypeArguments="x:String">envelopeIdOut</Literal>
+                    </uiisi:OperationEntityField.Value>
+                  </uiisi:OperationEntityField>
+                  <uiisi:OperationEntityField x:TypeArguments="udic:ReplaceCuratedSendEnvelopeResponse" x:Name="__ReferenceID13" ArgumentDirection="Out" ArgumentType="udic:ReplaceCuratedSendEnvelopeResponse" DataType="ReplaceCuratedSendEnvelopeResponse" Description="The Curated Send Envelope object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                    <uiisi:OperationEntityField.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                      </scg:Dictionary>
+                    </uiisi:OperationEntityField.Metadata>
+                  </uiisi:OperationEntityField>
+                </scg:List>
+              </udia:SendEnvelope.SelectedFields>
+              <udia:SendEnvelope.TelemetryProperties>
+                <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+              </udia:SendEnvelope.TelemetryProperties>
+            </udia:SendEnvelope>
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence sap2010:Annotation.AnnotationText="Send  a message box saying envelope creation has failed" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;An error occurred in creating and sending the envelope&quot;]" />
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </TryCatch.Finally>
+      </TryCatch>
+      <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="454,1074" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+        <ui:InterruptibleWhile.Body>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,944" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,884" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <TryCatch.Try>
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,406" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EnvelopeSignedWorkflow - Invoke Workflow File (EnvelopeSignedWorkflow.xaml)" sap:VirtualizedContainerService.HintSize="382,224" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="EnvelopeSignedWorkflow.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="UiPathEventConnector" />
+                      <InArgument x:TypeArguments="x:String" x:Key="UiPathEvent" />
+                      <InArgument x:TypeArguments="x:String" x:Key="UiPathEventObjectType" />
+                      <InArgument x:TypeArguments="x:String" x:Key="UiPathEventObjectId" />
+                      <InArgument x:TypeArguments="x:String" x:Key="UiPathAdditionalEventData" />
+                      <InOutArgument x:TypeArguments="x:String" x:Key="envelopeSignedStatus" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;No Signed Document Found yet&quot;]" />
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
+          </Sequence>
+        </ui:InterruptibleWhile.Body>
+        <ui:InterruptibleWhile.Condition>
+          <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="envelopeStatus &lt;&gt; &quot;Completed&quot;" />
+        </ui:InterruptibleWhile.Condition>
+      </ui:InterruptibleWhile>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="454,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Found Signed Document&quot;]" />
+      <udia:DownloadDocumentsOfEnvelope ActivityInstanceId="937cba05-5777-4b34-9688-69599a4f727f" BindingsVersion="2.1" BusinessEntityName="Download Envelope Documents" ConfiguredBusinessEntity="downloadEnvelopeDocuments" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" Connector="uipath-docusign-docusign" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Download Documents of Envelope" sap:VirtualizedContainerService.HintSize="454,235" sap2010:WorkflowViewState.IdRef="DownloadDocumentsOfEnvelope_1">
+        <udia:DownloadDocumentsOfEnvelope.BusinessEntity>
+          <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID14}" Name="downloadEnvelopeDocuments">
+            <uibi:BusinessEntity.AllFields>
+              <scg:List x:TypeArguments="uibi:EntityField" Capacity="5">
+                <x:Reference>__ReferenceID15</x:Reference>
+                <x:Reference>__ReferenceID16</x:Reference>
+                <x:Reference>__ReferenceID17</x:Reference>
+                <x:Reference>__ReferenceID18</x:Reference>
+                <x:Reference>__ReferenceID19</x:Reference>
+              </scg:List>
+            </uibi:BusinessEntity.AllFields>
+            <uibi:BusinessEntity.EntityMetadata>
+              <uibi:EntityMetadata DisplayName="Download Envelope Documents" EligibleOperations="32" IsCustomEntity="False" Name="downloadEnvelopeDocuments">
+                <uibi:EntityMetadata.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID14">
+                    <x:String x:Key="Object">downloadEnvelopeDocuments</x:String>
+                    <x:String x:Key="Client">UiPath.Docusign.IntegrationService.Client.DownloadEnvelopeDocumentsAPIClient</x:String>
+                    <x:String x:Key="Operation">GetDownloadEnvelopeDocuments</x:String>
+                    <x:String x:Key="Path">/downloadEnvelopeDocuments</x:String>
+                  </scg:Dictionary>
+                </uibi:EntityMetadata.Metadata>
+              </uibi:EntityMetadata>
+            </uibi:BusinessEntity.EntityMetadata>
+            <uibi:BusinessEntity.SelectedFields>
+              <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+                <x:Reference>__ReferenceID15</x:Reference>
+                <x:Reference>__ReferenceID16</x:Reference>
+                <x:Reference>__ReferenceID17</x:Reference>
+                <x:Reference>__ReferenceID18</x:Reference>
+                <x:Reference>__ReferenceID19</x:Reference>
+              </scg:List>
+            </uibi:BusinessEntity.SelectedFields>
+            <uibi:BusinessEntity.TelemetryProperties>
+              <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+            </uibi:BusinessEntity.TelemetryProperties>
+          </uibi:BusinessEntity>
+        </udia:DownloadDocumentsOfEnvelope.BusinessEntity>
+        <udia:DownloadDocumentsOfEnvelope.CachedLookupValues>
+          <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)">
+            <scg:List x:TypeArguments="uiisi:LookupValue" x:Key="envelopeId" Capacity="0" />
+          </scg:Dictionary>
+        </udia:DownloadDocumentsOfEnvelope.CachedLookupValues>
+        <udia:DownloadDocumentsOfEnvelope.DesignConnectionRequest>
+          <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" ConnectionName="hiscott2000@icloud.com" ConnectorKey="uipath-docusign-docusign">
+            <uiisi:ConnectionParameters.TelemetryInfo>
+              <uiisi:TelemetryInfo ActivityPack="UiPath.Docusign.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+            </uiisi:ConnectionParameters.TelemetryInfo>
+          </uiisi:ConnectionParameters>
+        </udia:DownloadDocumentsOfEnvelope.DesignConnectionRequest>
+        <udia:DownloadDocumentsOfEnvelope.SelectedFields>
+          <scg:List x:TypeArguments="uibi:EntityField" Capacity="5">
+            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID15" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the envelope. If the envelope is not found in the drop-down, you can first scroll the drop-down till the bottom to get all the available envelopes and then type the envelope or retrieve the envelope ID from the DocuSign application -&gt; &quot;Manage&quot; tab -&gt; Goto &quot;Sent&quot; or “Draft” under “Envelopes” -&gt; Click on the respective envelope and retrieve the envelope ID from URL. For example, if the URL is “https://appdemo.docusign.com/documents/details/3ae67e54-f761-4a5b-a23e-b5e4835492cc”, the envelope ID is “3ae67e54-f761-4a5b-a23e-b5e4835492cc”" DisplayName="Envelope" FormDataType="ExpressionTextBox" InArgumentValue="envelopeIdOut" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="envelopeId" ShouldFilterOnChange="False">
+              <uiisi:OperationEntityField.ArgumentValue>
+                <InArgument x:TypeArguments="x:String">envelopeIdOut</InArgument>
+              </uiisi:OperationEntityField.ArgumentValue>
+              <uiisi:OperationEntityField.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                </scg:Dictionary>
+              </uiisi:OperationEntityField.Metadata>
+              <uiisi:OperationEntityField.Value>
+                <Literal x:TypeArguments="x:String">envelopeIdOut</Literal>
+              </uiisi:OperationEntityField.Value>
+            </uiisi:OperationEntityField>
+            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID16" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Can take one of the following values i.e. “combined” for retrieving all documents as a single PDF file, “archive” for retrieving a ZIP archive that contains all of the PDF documents, “certificate” for retrieving only the certificate of completion and “portfolio” for retrieving the envelope documents as a PDF portfolio." DisplayName="Download type" FormDataType="ExpressionTextBox" InArgumentValue="portfollio" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="downloadType" ShouldFilterOnChange="False">
+              <uiisi:OperationEntityField.ArgumentValue>
+                <InArgument x:TypeArguments="x:String">portfollio</InArgument>
+              </uiisi:OperationEntityField.ArgumentValue>
+              <uiisi:OperationEntityField.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                </scg:Dictionary>
+              </uiisi:OperationEntityField.Metadata>
+              <uiisi:OperationEntityField.Value>
+                <Literal x:TypeArguments="x:String">portfollio</Literal>
+              </uiisi:OperationEntityField.Value>
+            </uiisi:OperationEntityField>
+            <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID17" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Used only when the Download type is “combined”. When true, the certificate of completion is included in the combined PDF file. Default is false." DisplayName="Include certificate" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="certificate" ShouldFilterOnChange="False">
+              <uiisi:OperationEntityField.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                </scg:Dictionary>
+              </uiisi:OperationEntityField.Metadata>
+            </uiisi:OperationEntityField>
+            <uiisi:OperationEntityField x:TypeArguments="udic:FileResponse" x:Name="__ReferenceID18" ArgumentDirection="Out" ArgumentType="udic:FileResponse" DataType="FileResponse" Description="The Download Envelope Documents object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+              <uiisi:OperationEntityField.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                </scg:Dictionary>
+              </uiisi:OperationEntityField.Metadata>
+            </uiisi:OperationEntityField>
+            <uiisi:OperationEntityField x:TypeArguments="upr:IResource" x:Name="__ReferenceID19" ArgumentDirection="Out" ArgumentType="upr:IResource" DataType="IResource" Description="Output IResource" DisplayName="File resource" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="FileResource" OutArgumentValue="[signedDocument]" ShouldFilterOnChange="False">
+              <uiisi:OperationEntityField.ArgumentValue>
+                <OutArgument x:TypeArguments="upr:IResource">[signedDocument]</OutArgument>
+              </uiisi:OperationEntityField.ArgumentValue>
+              <uiisi:OperationEntityField.Value>
+                <VisualBasicReference x:TypeArguments="upr:IResource">[signedDocument]</VisualBasicReference>
+              </uiisi:OperationEntityField.Value>
+            </uiisi:OperationEntityField>
+          </scg:List>
+        </udia:DownloadDocumentsOfEnvelope.SelectedFields>
+        <udia:DownloadDocumentsOfEnvelope.TelemetryProperties>
+          <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+        </udia:DownloadDocumentsOfEnvelope.TelemetryProperties>
+      </udia:DownloadDocumentsOfEnvelope>
+      <uga:UploadFilesConnections AllResults="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DestinationFolder="{x:Null}" FilesList="{x:Null}" FirstResult="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID20}" ManualFolderId="{x:Null}" OverwriteExistingFile="{x:Null}" SingleFileToUpload="{x:Null}" AuthScopesInvalid="False" BrowseFolderId="https://drive.google.com/drive/folders/1G5y5KwaWIw0LSPkNpaArQ4jTKQTDqn1P" ConflictResolution="Rename" ConnectionId="9ae725b6-4e43-4f75-b06a-228e54f0bde5" Convert="False" DisplayName="Upload Files" FilesInputMode="MultipleByVariable" FolderInputMode="Browse" sap:VirtualizedContainerService.HintSize="454,226" sap2010:WorkflowViewState.IdRef="UploadFilesConnections_2" MultipleFilesToUpload="[{ signedDocument }]" SaveToFolderName="UI PATH" UseConnectionService="True">
+        <uga:UploadFilesConnections.FilesBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:FilesInputMode" StoredValue="MultipleByVariable">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="MultipleByVariable" Capacity="1">
+                <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)">[signedDocument]</InArgument>
+              </scg:List>
+              <scg:List x:TypeArguments="x:Object" x:Key="MultipleByBuilder" Capacity="1">
+                <x:Null />
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:UploadFilesConnections.FilesBackup>
+        <uga:UploadFilesConnections.Folder>
+          <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://drive.google.com/drive/folders/1G5y5KwaWIw0LSPkNpaArQ4jTKQTDqn1P" ConnectionKey="9ae725b6-4e43-4f75-b06a-228e54f0bde5" FriendlyName="UI PATH" FullPathHint="My Drive/UI PATH" InputMode="Browse">
+            <ugam:DriveItemArgument.Backup>
+              <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID20" StoredValue="Browse">
+                <usau:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                </usau:BackupSlot.BackupValues>
+              </usau:BackupSlot>
+            </ugam:DriveItemArgument.Backup>
+            <ugam:DriveItemArgument.ParentIdFullPathHint>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </ugam:DriveItemArgument.ParentIdFullPathHint>
+          </ugam:DriveItemArgument>
+        </uga:UploadFilesConnections.Folder>
+      </uga:UploadFilesConnections>
+    </Sequence>
+  </Sequence>
+</Activity>

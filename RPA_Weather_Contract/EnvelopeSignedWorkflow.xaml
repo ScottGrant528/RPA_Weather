@@ -1,0 +1,148 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EnvelopeSignedWorkflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:udia="clr-namespace:UiPath.Docusign.IntegrationService.Activities;assembly=UiPath.Docusign.IntegrationService.Activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uiit="clr-namespace:UiPath.IntegrationService.Infrastructure.Triggers;assembly=UiPath.IntegrationService.Infrastructure" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:EnvelopeSignedWorkflow.UiPathEventConnector>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnvelopeSignedWorkflow.UiPathEventConnector>
+  <this:EnvelopeSignedWorkflow.UiPathEvent>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnvelopeSignedWorkflow.UiPathEvent>
+  <this:EnvelopeSignedWorkflow.UiPathEventObjectType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnvelopeSignedWorkflow.UiPathEventObjectType>
+  <this:EnvelopeSignedWorkflow.UiPathEventObjectId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnvelopeSignedWorkflow.UiPathEventObjectId>
+  <this:EnvelopeSignedWorkflow.UiPathAdditionalEventData>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnvelopeSignedWorkflow.UiPathAdditionalEventData>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>EnvelopeSignedWorkflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Triggers</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Docusign.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Models</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Docusign.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Docusign.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.DocuSign.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EnvelopeSignedWorkflow" sap:VirtualizedContainerService.HintSize="1013,950.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <udia:CreateTrigger Language="{x:Null}" ActivityInstanceId="805a261b-a171-464b-aebd-42e312cb9730" BindingsVersion="2.1" ConfiguredBusinessEntity="" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" Connector="uipath-docusign-docusign" CrudOperation="Trigger" DesignConnectionEnabled="True" DisplayName="Event Trigger" EventObjectId="[envelopeSignedStatus]" sap:VirtualizedContainerService.HintSize="334,275" sap2010:WorkflowViewState.IdRef="CreateTrigger_1" ObjectName="envelopes" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]">
+      <udia:CreateTrigger.BusinessEntity>
+        <uibi:BusinessEntity AllFields="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="envelopes">
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Category="Envelopes" DisplayName="Envelopes" EligibleOperations="64" IsCustomEntity="False" Name="envelopes" Section="Envelopes">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">envelopes</x:String>
+                  <x:String x:Key="Client">UiPath.Docusign.IntegrationService.Client.EnvelopesAPIClient</x:String>
+                  <x:String x:Key="Operation">GetEnvelopes</x:String>
+                  <x:String x:Key="Path">/envelopes</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </udia:CreateTrigger.BusinessEntity>
+      <udia:CreateTrigger.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </udia:CreateTrigger.CachedLookupValues>
+      <udia:CreateTrigger.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="e088b2c0-cd79-4ad0-ac05-586f5e364295" ConnectionName="hiscott2000@icloud.com" ConnectorKey="uipath-docusign-docusign">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Docusign.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </udia:CreateTrigger.DesignConnectionRequest>
+      <udia:CreateTrigger.Operation>
+        <uiit:TriggerOperation DisplayName="Envelope Signed by All Recipients" Key="ENVELOPE_SIGNED" ObjectName="envelopes" />
+      </udia:CreateTrigger.Operation>
+      <udia:CreateTrigger.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </udia:CreateTrigger.TelemetryProperties>
+    </udia:CreateTrigger>
+  </Sequence>
+</Activity>
